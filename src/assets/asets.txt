@@ -1,0 +1,2 @@
+put all your images here
+youl import them in your  components for use as you please
