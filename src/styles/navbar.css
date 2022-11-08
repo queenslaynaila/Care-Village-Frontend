@@ -1,0 +1,27 @@
+.navbar-brand {
+    font-size: larger;
+    font-weight: bold;
+    color: #EF506B;
+}
+
+.login {
+    border: 2px solid #EF506B;
+    border-radius: 2px;
+    padding: 3px 8px 3px 8px;
+    color: #EF506B;
+}
+.login:hover {
+    background-color: #EF506B;
+    color: white;
+}
+.signup {
+    background-color: #EF506B;
+    padding: 5px 10px 5px 10px;
+    color: white;
+}
+
+.h-get-started {
+    background-color: #99005c;
+    color: white;
+    border: 1px solid #99005c;
+}
