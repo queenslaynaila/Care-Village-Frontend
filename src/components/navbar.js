@@ -22,10 +22,12 @@ function Navbar() {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav fw-bold ms-auto mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <a href="#" className="nav-link">Help</a>
+                                <a className="nav-link" href="#" onClick={() => navigate("/help")}>Help</a>
                             </li>
                             <li className="nav-item ms-sm-3 mb-sm-0 mb-2">
-                                <a href="#" className="nav-link login d-inline-flex">Login</a>
+                                <a className="nav-link login d-inline-flex" href="#"
+                                   onClick={() => navigate("/login")}>
+                                    Login</a>
                             </li>
                             <li className="nav-item dropdown ms-sm-3">
                                 <a className="nav-link signup dropdown-toggle d-inline-flex"
@@ -33,8 +35,10 @@ function Navbar() {
                                     Signup
                                 </a>
                                 <ul className="dropdown-menu">
-                                    <li><a className="dropdown-item fw-bold" href="#">As a Client</a></li>
-                                    <li><a className="dropdown-item fw-bold" href="#">As a Sitter</a></li>
+                                    <li><a className="dropdown-item fw-bold" href="#"
+                                           onClick={() => navigate("/client-signup")}>As a Client</a></li>
+                                    <li><a className="dropdown-item fw-bold" href="#"
+                                           onClick={() => navigate("/sitter-signup")}>As a Sitter</a></li>
                                 </ul>
                             </li>
                         </ul>
