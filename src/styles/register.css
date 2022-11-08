@@ -1,143 +1,122 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-body{
-  width: 100%;
-  height: 100vh;
+
+.main{
   display: flex;
-  align-items: center;
   justify-content: center;
-   
+  align-items: center;
+
 }
-::selection{
-  color: #fff;
-  background: #5372F0;
-}
-.wrapper{
-  width: 380px;
-  padding: 40px 30px 50px 30px;
+.logincontainer{
   background: #fff;
+  max-width: 420px;
+  width: 100%;
+  padding: 25px 30px;
   border-radius: 5px;
-  text-align: center;
-  box-shadow: 10px 10px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15);
+  font-family: 'Poppins',sans-serif;
 }
-.wrapper header{
-  font-size: 35px;
+.logincontainer form .title{
+  font-size: 20px;
   font-weight: 600;
+  margin: 20px 0 10px 0;
+  position: relative;
+  color: #dc3545
 }
-.wrapper form{
-  margin: 40px 0;
+.logincontainer form .title:before{
+  content: '';
+  position: absolute;
+  height: 4px;
+  width: 33px;
+  left: 0px;
+  bottom: 3px;
+  border-radius: 5px;
+
 }
-form .field{
+.logincontainer form .input-box{
   width: 100%;
-  margin-bottom: 20px;
-}
-form .field.shake{
-  animation: shake 0.3s ease-in-out;
-}
-@keyframes shake {
-  0%, 100%{
-    margin-left: 0px;
-  }
-  20%, 80%{
-    margin-left: -12px;
-  }
-  40%, 60%{
-    margin-left: 12px;
-  }
-}
-form .field .input-area{
-  height: 50px;
-  width: 100%;
+  height: 45px;
+  margin-top: 25px;
   position: relative;
 }
-form input{
+.logincontainer form .input-box input{
   width: 100%;
   height: 100%;
   outline: none;
-  padding: 0 45px;
-  font-size: 18px;
-  background: none;
-  caret-color: #5372F0;
-  border-radius: 5px;
-  border: 1px solid #bfbfbf;
-  border-bottom-width: 2px;
-  transition: all 0.2s ease;
-}
-form .field input:focus,
-form .field.valid input{
-  border-color: #5372F0;
-}
-form .field.shake input,
-form .field.error input{
-  border-color: #dc3545;
-}
-.field .input-area i{
-  position: absolute;
-  top: 50%;
-  font-size: 18px;
-  pointer-events: none;
-  transform: translateY(-50%);
-}
-.input-area .icon{
-  left: 15px;
-  color: #bfbfbf;
-  transition: color 0.2s ease;
-}
-.input-area .error-icon{
-  right: 15px;
-  color: #dc3545;
-}
-form input:focus ~ .icon,
-form .field.valid .icon{
-  color: #5372F0;
-}
-form .field.shake input:focus ~ .icon,
-form .field.error input:focus ~ .icon{
-  color: #bfbfbf;
-}
-form input::placeholder{
-  color: #bfbfbf;
-  font-size: 17px;
-}
-form .field .error-txt{
-  color: #dc3545;
-  text-align: left;
-  margin-top: 5px;
-}
-form .field .error{
-  display: none;
-}
-form .field.shake .error,
-form .field.error .error{
-  display: block;
-}
-form .pass-txt{
-  text-align: left;
-  margin-top: -10px;
-}
-.wrapper a{
-  color: #5372F0;
-  text-decoration: none;
-}
-.wrapper a:hover{
-  text-decoration: underline;
-}
-form input[type="submit"]{
-  height: 50px;
-  margin-top: 30px;
-  color: #fff;
-  padding: 0;
+  font-size: 16px;
   border: none;
-  background: #5372F0;
-  cursor: pointer;
-  border-bottom: 2px solid rgba(0,0,0,0.1);
+}
+.logincontainer form .underline::before{
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: #ccc;
+  left: 0;
+  bottom: 0;
+}
+.logincontainer form .underline::after{
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(to right, #99004d 0%, #ff0080 100%);
+  left: 0;
+  bottom: 0;
+  transform: scaleX(0);
+  transform-origin: left;
   transition: all 0.3s ease;
 }
-form input[type="submit"]:hover{
-  background: #2c52ed;
+
+.logincontainer form .button{
+  margin: 40px 0 20px 0;
+}
+.logincontainer .input-box input[type="submit"]{
+  background: #990056;
+  font-size: 17px;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.logincontainer .input-box input[type="submit"]:hover{
+  letter-spacing: 1px;
+  background: linear-gradient(to left, #99004d 0%, #ff0080 100%);
+}
+.container .option{
+  font-size: 14px;
+  text-align: center;
+}
+.container .facebook a,
+.container .twitter a{
+  display: block;
+  height: 45px;
+  width: 100%;
+  font-size: 15px;
+  text-decoration: none;
+  padding-left: 20px;
+  line-height: 45px;
+  color: #fff;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.container .facebook i,
+.container .twitter i{
+  padding-right: 12px;
+  font-size: 20px;
+}
+.container .twitter a{
+  background: #990056;
+  margin: 20px 0 15px 0;
+}
+.container .twitter a:hover{
+  background:  linear-gradient(to left, #99004d 0%, #ff0080 100%);
+  margin: 20px 0 15px 0;
+}
+.container .facebook a{
+  background: #990056 ;
+  margin: 20px 0 50px 0;
+}
+.container .facebook a:hover{
+  background: linear-gradient(to left, #99004d 0%, #ff0080 100%);;
+  margin: 20px 0 50px 0;
 }

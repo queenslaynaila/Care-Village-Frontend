@@ -25,8 +25,8 @@ function Navbar() {
                                 <a className="nav-link" href="/#" onClick={() => navigate("/help")}>Help</a>
                             </li>
                             <li className="nav-item ms-sm-3 mb-sm-0 mb-2">
-                                <a className="nav-link login" href="/#"
-                                   onClick={() => navigate("/register")}>
+                                <a className="nav-link login" href="/login"
+                                   onClick={() => navigate("/login")}>
                                     Login</a>
                             </li>
                             <li className="nav-item dropdown ms-sm-3">

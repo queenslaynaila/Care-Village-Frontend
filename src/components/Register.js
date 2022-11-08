@@ -1,53 +1,34 @@
-import { Alert, Box, Button, Card, CircularProgress, Snackbar, TextField, Typography } from '@mui/material'
-import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom';
- 
-const Register = () => {
-    const [isLoading, setIsLoading] = useState(false);
-    const [scaffoldShow, setScaffoldShow] = useState(false);
-
-    const closeScaffold = () => {setScaffoldShow(false)};
-    const navigate = useNavigate();
-
-    const loginHandler = () => {
-        setIsLoading(true);
-        setTimeout(() => {
-            setScaffoldShow(true);
-            setIsLoading(false);
-            setTimeout(() => {
-                setScaffoldShow(false);
-                navigate('/register/complete');
-            }, 4000)
-        }, 5000)
-    }
-
+import React from 'react'
+import "../styles/register.css"
+export default function Register() {
   return (
-    <div class="wrapper">
-    <header>Login Form</header>
-    <form action="#">
-      <div class="field email">
-        <div class="input-area">
-          <input type="text" placeholder="Email Address"></input>
-          <i class="icon fas fa-envelope"></i>
-          <i class="error error-icon fas fa-exclamation-circle"></i>
-        </div>
-        <div class="error error-txt">Email can't be blank</div>
+      <div className='main'>
+        <div className="logincontainer">
+          <form>
+            <div className="title"><a className="navbar-brand" href="/#">
+                        <i className="bi bi-flower3"></i> Care Village
+                    </a></div>
+             <div  className="input-box underline">
+              <input type="text" placeholder="Enter Your username" required></input>
+              <div  className="underline"></div>
+            </div>
+            <div className="input-box">
+              <input type="password" placeholder="Enter Your Password" required></input>
+              <div className="underline"></div>
+            </div>
+            <div className="input-box button">
+             <input type="submit" name="" value="LOG IN"></input>
+           </div>
+         </form>
+         <div className="option">or Connect With Social Media</div>
+         <div className="twitter">
+           <a href="/#"><i className="fab fa-twitter"></i>Sign in With Twitter</a>
+         </div>
+         <div className="facebook">
+           <a href="/#"><i className="fab fa-facebook-f"></i>Sign in With Facebook</a>
+         </div>
+       </div>
       </div>
-      <div class="field password">
-        <div class="input-area">
-          <input type="password" placeholder="Password"></input>
-          <i class="icon fas fa-lock"></i>
-          <i class="error error-icon fas fa-exclamation-circle"></i>
-        </div>
-        <div class="error error-txt">Password can't be blank</div>
-      </div>
-      <div class="pass-txt"><a href="#">Forgot password?</a></div>
-      <input type="submit" value="Login"></input>
-    </form>
-    <div class="sign-txt">Not yet member? <a href="#">Signup now</a></div>
-  </div>
-
   )
 }
 
-export default Register
