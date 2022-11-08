@@ -1,6 +1,7 @@
 import React from "react";
 import {useNavigate} from "react-router-dom"
 import {Outlet} from "react-router-dom"
+import Footer from "./footer";
 import "../styles/navbar.css"
 
 function Navbar() {
@@ -19,21 +20,21 @@ function Navbar() {
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <ul className="navbar-nav fw-bold ms-auto mb-2 mb-lg-0">
                             <li className="nav-item">
                                 <a href="#" className="nav-link">Help</a>
                             </li>
-                            <li className="nav-item me-2">
-                                <a href="#" className="nav-link login">Login</a>
+                            <li className="nav-item ms-sm-3 mb-sm-0 mb-2">
+                                <a href="#" className="nav-link login d-inline-flex">Login</a>
                             </li>
-                            <li className="nav-item dropdown">
-                                <a className="nav-link signup dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                   aria-expanded="false">
+                            <li className="nav-item dropdown ms-sm-3">
+                                <a className="nav-link signup dropdown-toggle d-inline-flex"
+                                   href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Signup
                                 </a>
                                 <ul className="dropdown-menu">
-                                    <li><a className="dropdown-item" href="#">As a Client</a></li>
-                                    <li><a className="dropdown-item" href="#">As a Sitter</a></li>
+                                    <li><a className="dropdown-item fw-bold" href="#">As a Client</a></li>
+                                    <li><a className="dropdown-item fw-bold" href="#">As a Sitter</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -42,6 +43,9 @@ function Navbar() {
             </nav>
             <div className="container col-sm-9">
                 <Outlet/>
+            </div>
+            <div className="container col-sm-9">
+                <Footer />
             </div>
         </div>
     )
