@@ -27,7 +27,7 @@ function Footer() {
                                 <label htmlFor="newsletter1" className="visually-hidden">Email address</label>
                                 <input id="newsletter1" type="text" className="form-control"
                                        placeholder="Email address"/>
-                                <button className="btn btn-secondary" type="button">Subscribe</button>
+                                <button className="btn btn-danger" type="button">Subscribe</button>
                             </div>
                         </form>
                     </div>
@@ -37,14 +37,14 @@ function Footer() {
                 <div className="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
                     <p>&copy; 2022 Company, Inc. All rights reserved.</p>
                     <ul className="list-unstyled d-flex">
-                        <li className="ms-3"><a className="link-dark" href="#">
-                            <li className="bi-twitter"></li>
-                        </a></li>
-                        <li className="ms-3"><a className="link-dark" href="#">
+                        <li className="ms-3"><a className="link-danger" href="#">
                             <li className="bi-instagram"></li>
                         </a></li>
-                        <li className="ms-3"><a className="link-dark" href="#">
+                        <li className="ms-3"><a className="link-blue" href="#">
                             <li className="bi-facebook"></li>
+                        </a></li>
+                        <li className="ms-3"><a className="link-dark" href="#">
+                            <li className="bi-twitter"></li>
                         </a></li>
                     </ul>
                 </div>
