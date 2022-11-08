@@ -7,7 +7,7 @@
 .login {
     border: 2px solid #EF506B;
     border-radius: 2px;
-    padding: 3px 8px 3px 5px;
+    padding: 5px 10px 5px 10px;
     color: #EF506B;
 }
 .login:hover {
@@ -16,8 +16,15 @@
 }
 .signup {
     background-color: #EF506B;
+    border: 2px solid #EF506B;
     padding: 5px 10px 5px 10px;
     color: white;
+}
+.signup:hover {
+    color: inherit;
+    background-color: inherit;
+    border: 2px solid #EF506B;
+    padding: 5px 10px 5px 10px;
 }
 
 .h-get-started {
