@@ -26,7 +26,7 @@ function Navbar() {
                             </li>
                             <li className="nav-item ms-sm-3 mb-sm-0 mb-2">
                                 <a className="nav-link login" href="/#"
-                                   onClick={() => navigate("/login")}>
+                                   onClick={() => navigate("/register")}>
                                     Login</a>
                             </li>
                             <li className="nav-item dropdown ms-sm-3">
