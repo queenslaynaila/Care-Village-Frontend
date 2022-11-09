@@ -1,16 +1,22 @@
-import React, {useState} from "react";
+import React from "react";
+import { useRef, useState, useEffect } from "react";
 import {useNavigate} from "react-router-dom";
-
 export default function Login() {
+
+
+    const [username, setUserName] = useState('');
+    const [password, setPassword] = useState('');
+    const [errMsg, setErrMsg] = useState('');
+    const [success, setSuccess] = useState('');
+
+
     const navigate = useNavigate()
-    const url = 'http://localhost:8000/login'
-    const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
+    const url = 'http://localhost:8000/users'
 
     function handleSubmit(e) {
         e.preventDefault()
         const data = {
-            email: email,
+            username: username,
             password: password,
         }
         fetch(url, {
@@ -18,21 +24,25 @@ export default function Login() {
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(data)
         }).then(res => res.json())
-            .then(() => navigate('/profile'))
+        .then((dta) => console.log(dta))
+         
     }
 
+
     return (
-        <div className="col-sm-6">
+         <section>
+
+            <div className="col-sm-6">
             <h2 className="mb-3">Login</h2>
             <form onSubmit={handleSubmit}>
                 <div className="mb-2">
                     <input
-                        type="email"
+                        type="text"
                         className="form-control"
                         id="email"
-                        placeholder="Email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
+                        placeholder="Username"
+                        value={username}
+                        onChange={(e) => setUserName(e.target.value)}
                         required
                     />
                 </div>
@@ -50,7 +60,7 @@ export default function Login() {
                 <div>
                     <p className="my-3">
                         Don't have an account?{' '}
-                        <a href="#/" className="text-decoration-none" onClick={() => navigate("/signup")}>
+                        <a href="/#" className="text-decoration-none" onClick={() => navigate("/signup")}>
                             Sign up here
                         </a>
                     </p>
@@ -58,5 +68,6 @@ export default function Login() {
                 <button type="submit" className="btn btn-danger">Login</button>
             </form>
         </div>
+         </section>
     )
 }

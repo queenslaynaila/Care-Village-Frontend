@@ -3,7 +3,7 @@ import {useNavigate} from "react-router-dom";
 
 export default function SignupSitter() {
     const navigate = useNavigate()
-    const url = 'http://localhost:9292/clientregistration'
+    const url = 'http://localhost:9292//sitterregistration'
     const [email, setEmail] = useState('')
     const [username, setUsername] = useState('')
     const [firstName, setFirstName] = useState('')
@@ -25,8 +25,12 @@ export default function SignupSitter() {
                 firstname: firstName,
                 lastname: lastName,
                 username: username,
-                location: location,
+                gender:gender,
                 email: email,
+                phonenumber:phoneNumber,
+                yearOfBirth:phoneNumber,
+                age:(new Date().getFullYear()-yearOfBirth),
+                location: location,
                 password: password
             }
             setError("")
@@ -175,7 +179,7 @@ export default function SignupSitter() {
                         </a>
                     </p>
                 </div>
-                <button type="submit" className="btn btn-danger">Sign up</button>
+                <button   type="submit" className="btn btn-danger">Sign up</button>
             </form>
         </div>
     )
