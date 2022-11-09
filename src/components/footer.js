@@ -12,14 +12,10 @@ function Footer() {
                     <div className="col-sm-6 mb-3">
                         <h5>Quick Links</h5>
                         <ul className="nav flex-column">
-                            <li className="nav-item mb-2"><a href="/#" className="nav-link p-0 text-muted"
-                                onClick={() => navigate("/client-signup")}>Sign up as a Client</a></li>
-                            <li className="nav-item mb-2"><a href="/#" className="nav-link p-0 text-muted"
-                                onClick={() => navigate("/sitter-signup")}>Sign up as a Sitter</a></li>
-                            <li className="nav-item mb-2"><a href="/#" className="nav-link p-0 text-muted"
-                                                             onClick={() => navigate("/login")}>Login</a></li>
-                            <li className="nav-item mb-2"><a href="/#" className="nav-link p-0 text-muted"
-                                                             onClick={() => navigate("/help")}>Help</a></li>
+                            <li className="nav-item mb-2"><a href="/#" className="nav-link p-0 text-muted"onClick={() => navigate("/client-signup")}>Sign up as a Client</a></li>
+                            <li className="nav-item mb-2"><a href="/#" className="nav-link p-0 text-muted"onClick={() => navigate("/sitter-signup")}>Sign up as a Sitter</a></li>
+                            <li className="nav-item mb-2"><a href="/#" className="nav-link p-0 text-muted"onClick={() => navigate("/login")}>Login</a></li>
+                            <li className="nav-item mb-2"><a href="/#" className="nav-link p-0 text-muted"onClick={() => navigate("/help")}>Help</a></li>
                         </ul>
                     </div>
                     <div className="col-sm-6 mb-3">

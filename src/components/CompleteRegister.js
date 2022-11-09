@@ -1,7 +1,7 @@
 import { Abc, ArrowRightAlt, Face2, Handshake, Pets, Stroller } from '@mui/icons-material'
 import { Box, Card, Typography } from '@mui/material'
 import React from 'react'
- 
+
 
 const CompleteRegister = () => {
   return (
@@ -9,7 +9,7 @@ const CompleteRegister = () => {
 
         <Box sx={{ height: '100vh', width: '100%', display: 'flex', alignItems: "center", justifyContent: 'center' }}>
             <Box sx={{ padding: 2, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: "center" }}>
-                <Typography sx={{ mb: 2 }} variant='body1'>What type of care do you currently need?</Typography>
+                <Typography  sx={{ mb: 2 }} variant='body1'>What type of care do you currently need?</Typography>
                 <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                     <Card variant='outlined' sx={{ mr: 1, ml: 1, padding: 2, display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
                         <Abc sx={{ mb: 1 }}></Abc>
