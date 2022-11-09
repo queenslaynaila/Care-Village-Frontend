@@ -5,6 +5,14 @@
   align-items: center;
 
 }
+.errmsg {
+  background-color: lightpink;
+  color: firebrick;
+  font-weight: bold;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 .logincontainer{
   background: #fff;
   max-width: 420px;
@@ -44,27 +52,7 @@
   font-size: 16px;
   border: none;
 }
-.logincontainer form .underline::before{
-  content: '';
-  position: absolute;
-  height: 2px;
-  width: 100%;
-  background: #ccc;
-  left: 0;
-  bottom: 0;
-}
-.logincontainer form .underline::after{
-  content: '';
-  position: absolute;
-  height: 2px;
-  width: 100%;
-  background: linear-gradient(to right, #99004d 0%, #ff0080 100%);
-  left: 0;
-  bottom: 0;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: all 0.3s ease;
-}
+
 
 .logincontainer form .button{
   margin: 40px 0 20px 0;

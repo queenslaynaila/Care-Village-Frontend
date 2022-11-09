@@ -1,6 +1,6 @@
 import React from "react";
 import sitterlogo from "../assets/sitter.png";
-import "../styles/sitter.css"; 
+import "../styles/sitter.css";
 
 
 function Sitters(){
@@ -16,7 +16,7 @@ function Sitters(){
                                 <div className="card-body">
                                     <div className="row">
                                         <div className="col-sm-2">
-                                            <img  src={sitterlogo} className="img-fluid" alt=""></img>      
+                                            <img  src={sitterlogo} className="img-fluid" alt=""></img>
                                         </div>
                                         <div className="col-sm-8">
                                             <br/><br/>
@@ -93,7 +93,7 @@ function Sitters(){
                                 </div>
                         </div>
                     </div>
-                    
+
             </div>
         </React.Fragment>
     )
