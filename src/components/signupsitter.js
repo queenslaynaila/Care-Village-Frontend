@@ -3,7 +3,7 @@ import {useNavigate} from "react-router-dom";
 
 export default function SignupSitter() {
     const navigate = useNavigate()
-    const url = 'http://localhost:9292//sitterregistration'
+    const url = 'http://localhost:8000//sitterregistration'
     const [email, setEmail] = useState('')
     const [username, setUsername] = useState('')
     const [firstName, setFirstName] = useState('')
@@ -22,28 +22,28 @@ export default function SignupSitter() {
         let data;
         if (password === confirmPassword) {
             data = {
-                firstname: firstName,
-                lastname: lastName,
+                firstname:firstName,
+                lastname:lastName,
                 username: username,
                 gender:gender,
                 email: email,
                 phonenumber:phoneNumber,
                 yearOfBirth:phoneNumber,
-                age:(new Date().getFullYear()-yearOfBirth),
-                location: location,
-                password: password
+                age:age,
+                location:location,
+                password:password
             }
-            setError("")
+
         } else {
             setError("Passwords do not match")
         }
-        console.log(data)
+
         fetch(url, {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(data)
         }).then(res => console.log(res.json()))
-          //  .then(data => navigate('/profile/' + data.username))
+        .then(data => navigate('/login'))
     }
 
     return (

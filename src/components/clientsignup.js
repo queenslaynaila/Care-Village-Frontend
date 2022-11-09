@@ -3,7 +3,7 @@ import {useNavigate} from "react-router-dom";
 
 export default function SignupClient() {
     const navigate = useNavigate()
-    const url = 'http://localhost:9292/clientregistration'
+    const url = 'http://localhost:8000/clientregistration'
     const [email, setEmail] = useState('')
     const [username, setUsername] = useState('')
     const [firstName, setFirstName] = useState('')
@@ -11,7 +11,7 @@ export default function SignupClient() {
     const [location, setLocation] = useState('')
     const [password, setPassword] = useState('')
     const [confirmPassword, setConfirmPassword] = useState('')
-    const [phoneNumber,setPhoneNumber] = useState()
+    const [phoneNumber,setPhoneNumber] = useState('')
     const [error, setError] = useState('')
 
     function handleSubmit(e) {
@@ -24,6 +24,7 @@ export default function SignupClient() {
                 username: username,
                 location: location,
                 email: email,
+                phoneNumber:phoneNumber,
                 password: password
             }
             setError("")
@@ -35,8 +36,8 @@ export default function SignupClient() {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(data)
-        }).then(res => console.log(res.json()))
-          //  .then(data => navigate('/profile/' + data.username))
+        }).then(res =>res.json())
+        .then(data => console.log(data))
     }
 
     return (
