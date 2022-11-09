@@ -5,7 +5,7 @@ function Footer() {
     let navigate = useNavigate()
 
     return (
-        <div className="container">
+        <div className="container" style={{paddingTop:"end"}}>
             <footer className="py-5">
                 <hr/>
                 <div className="row">
