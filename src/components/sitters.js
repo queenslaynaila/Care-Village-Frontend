@@ -11,18 +11,22 @@ function Sitters(){
             <div className="container">
                     {/* sitterdetails */}
                     <div className="row">
-                        <div className="card">
-                            <div className="card-body">
-                                <div className="col-sm-2">
-                                    <img  src={sitterlogo} className="img-fluid" alt=""></img>      
+                        <div className="col">
+                            <div className="card">
+                                <div className="card-body">
+                                    <div className="row">
+                                        <div className="col-sm-2">
+                                            <img  src={sitterlogo} className="img-fluid" alt=""></img>      
+                                        </div>
+                                        <div className="col-sm-8">
+                                            <br/><br/>
+                                            <h5 className="sittername">Queenslay Naila</h5>
+                                            <p className="sitteremail">queenslayjema@gmail.com</p>
+                                <button className="sharebtn">Share</button>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div className="col-sm-8">
-                                    <h5>Queenslay Naila</h5>
-                                    <p>queenslayjema@gmail.com</p>
-                                </div>
-                                
                             </div>
-                            <button className="sharebtn">Share</button>
                         </div>
                     </div>
                     <br/>
@@ -32,8 +36,8 @@ function Sitters(){
                         <div className="card">
                             <div className="card-body">
                                 <h2>Job postings</h2>
-                                <div className="col-sm-8">
-                                <table class="table">
+                                <div className="col-sm-8 justify-content-center">
+                                <table className="table">
                                     <thead>
                                         <tr>
                                             <th scope="col">#</th>

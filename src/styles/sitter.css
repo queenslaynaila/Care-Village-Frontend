@@ -12,5 +12,15 @@
     width: 80px;
     height: 50px;
     position: relative;
-    /* float: left; */
+    display: flex;
+    justify-content: flex-end;
+
+
+ }
+ .sittername{
+    font-size: 30px;
+ }
+
+ .sitteremail{
+    font-size: 20px;
  }
