@@ -7,6 +7,7 @@ import CompleteRegister from "./components/CompleteRegister"
 import Register from "./components/Register"
 import ResponsiveAppBar from "./components/ResponsiveAppBAr";
 import Accordion from "./components/accordion"
+import Sitters from "./components/sitters";
 export default function Approuter() {
   return (
     <Router>
@@ -15,6 +16,7 @@ export default function Approuter() {
             <Route path='/' element={<Home/>}/>
             <Route path='/login' element={<Register></Register>}></Route>
            <Route path='/register/complete' element={<CompleteRegister></CompleteRegister>}></Route>
+           <Route path='/sitters' element={<Sitters/>}></Route>
 
            <Route path='/help' element={<Accordion></Accordion>}></Route>
 
