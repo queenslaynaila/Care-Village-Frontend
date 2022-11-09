@@ -1,0 +1,81 @@
+.userdetails{
+    box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+    padding: 24px;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #444!important;
+    padding-bottom: 0!important;
+    margin-bottom: 20px;
+    line-height: 1.43;
+    letter-spacing: 0.01071em;
+    font-size: 14px!important;
+    font-weight: 500!important
+}
+.userdash{
+    display: flex;
+    margin-right: -15px;
+    margin-left: -15px;
+    padding-bottom: 15px;
+}
+
+.avatar{
+    display: grid;
+    align-items: center;
+    align-content: center;
+}
+.subavatar{
+    background-color: rgb(228, 126, 222);
+    width: 120px;
+    height: 120px;
+    font-size: 40px;
+    color: #fff;
+    align-items: center;
+    flex-shrink: 0;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    line-height: 1;
+    user-select: none;
+    border-radius: 50%;
+    justify-content: center;
+}
+.dashbtns{
+    border-width: 1px;
+    margin-bottom: 15px ;
+    float: left;
+    cursor: pointer;
+    border: 1px solid #0a4fbe;
+    font-size: 14px;
+    background: transparent;
+    line-height: 1.75;
+    border-radius: 4px;
+    letter-spacing: 0.02857em;
+    text-transform: capitalize;
+}
+.updatecard{
+    padding: 24px;
+    box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+    border-radius: 4px;
+}
+.dropdown{
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    margin: 16px;
+    position: relative;
+    box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+    display: block;
+}
+.userdetails2{
+    box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+    padding: 34px;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #444 ;
+
+    margin-left: 0%;
+    margin-bottom: 20px;
+    line-height: 1.43;
+    letter-spacing: 0.01071em;
+    font-size: 14px!important;
+    font-weight: 500!important
+}
