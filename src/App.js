@@ -6,7 +6,8 @@ import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import Navbar from "./components/navbar";
 import Home from "./components/home";
 import NotFound from "./components/404";
-import Signup from "./components/signup"
+import SignupSitter from "./components/signupsitter"
+import SignupClient from "./components/clientsignup"
 export default function Approuter() {
   const [users,setUsers] =useState([])
   useEffect(() => {
@@ -20,8 +21,10 @@ export default function Approuter() {
         <Route path='/' element={<Navbar/>}>
             <Route path='/' element={<Home/>}/>
             <Route path='/login' element={<Register users={users}></Register>}></Route>
-             <Route path='/signup' element={<Signup/>}/>
+             <Route path='/signupsitter' element={<SignupSitter/>}/>
+             <Route path='/registerclient' element={< SignupClient></SignupClient>}/>
             <Route path='/register/complete' element={<CompleteRegister></CompleteRegister>}></Route>
+            <Route path='/help' element={<Accordion></Accordion>}></Route>
             <Route path='/help' element={<Accordion></Accordion>}></Route>
             <Route path='*' element={<NotFound/>}/>
         </Route>

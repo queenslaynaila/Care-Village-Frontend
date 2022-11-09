@@ -1,13 +1,17 @@
 import React, {useState} from "react";
 import {useNavigate} from "react-router-dom";
 
-export default function Signup() {
+export default function SignupSitter() {
     const navigate = useNavigate()
     const url = 'http://localhost:9292/clientregistration'
     const [email, setEmail] = useState('')
     const [username, setUsername] = useState('')
     const [firstName, setFirstName] = useState('')
     const [lastName, setLastName] = useState('')
+    const [gender, setGender] = useState('')
+    const [phoneNumber, setPhoneNumber] = useState()
+    const [yearOfBirth, setYearOfBirth] = useState()
+    const [age, setAge] = useState()
     const [location, setLocation] = useState('')
     const [password, setPassword] = useState('')
     const [confirmPassword, setConfirmPassword] = useState('')
@@ -94,6 +98,54 @@ export default function Signup() {
                 <div className="row mb-2">
                     <div className="col">
                         <input
+                            type="text"
+                            className="form-control"
+                            id="location"
+                            placeholder="Location"
+                            value={location}
+                            onChange={(e) => setLocation(e.target.value)}
+                            required
+                        />
+                    </div>
+                    <div className="col">
+                        <input
+                            type="text"
+                            className="form-control"
+                            id="phonenumber"
+                            placeholder="Phone Number"
+                            value={phoneNumber}
+                            onChange={(e) => setPhoneNumber(e.target.value)}
+                            required
+                        />
+                    </div>
+                </div>
+                <div className="row mb-2">
+                    <div className="col">
+                        <input
+                            type="text"
+                            className="form-control"
+                            id="yearofbirth"
+                            placeholder="Year of Birth"
+                            value={yearOfBirth}
+                            onChange={(e) => setYearOfBirth(e.target.value)}
+                            required
+                        />
+                    </div>
+                    <div className="col">
+                        <input
+                            type="text"
+                            className="form-control"
+                            id="age"
+                            placeholder="Age"
+                            value={age}
+                            onChange={(e) => setAge(e.target.value)}
+                            required
+                        />
+                    </div>
+                </div>
+                <div className="row mb-2">
+                    <div className="col">
+                        <input
                             type="password"
                             className="form-control"
                             id="password"
@@ -111,19 +163,6 @@ export default function Signup() {
                             placeholder="Confirm Password"
                             value={confirmPassword}
                             onChange={(e) => setConfirmPassword(e.target.value)}
-                            required
-                        />
-                    </div>
-                </div>
-                <div className="row mb-2">
-                    <div className="col">
-                        <input
-                            type="text"
-                            className="form-control"
-                            id="location"
-                            placeholder="Location"
-                            value={location}
-                            onChange={(e) => setLocation(e.target.value)}
                             required
                         />
                     </div>
