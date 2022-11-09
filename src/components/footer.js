@@ -1,22 +1,25 @@
 import React from "react";
+import {useNavigate} from "react-router-dom"
 
 function Footer() {
+    let navigate = useNavigate()
+
     return (
-        <div className="container">
+        <div className="container" style={{paddingTop:"end"}}>
             <footer className="py-5">
                 <hr/>
                 <div className="row">
                     <div className="col-sm-6 mb-3">
                         <h5>Quick Links</h5>
                         <ul className="nav flex-column">
-                            <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">
-                                Sign up as a Client</a></li>
-                            <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">
-                                Sign up as a Sitter</a></li>
-                            <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Login</a>
-                            </li>
-                            <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Help</a>
-                            </li>
+                            <li className="nav-item mb-2"><a href="#/" className="nav-link p-0 text-muted"
+                                onClick={() => navigate("/signup")}>Sign up as a Client</a></li>
+                            <li className="nav-item mb-2"><a href="#/" className="nav-link p-0 text-muted"
+                                onClick={() => navigate("/signup-as-sitter")}>Sign up as a Sitter</a></li>
+                            <li className="nav-item mb-2"><a href="#/" className="nav-link p-0 text-muted"
+                                                             onClick={() => navigate("/login")}>Login</a></li>
+                            <li className="nav-item mb-2"><a href="#/" className="nav-link p-0 text-muted"
+                                                             onClick={() => navigate("/help")}>Help</a></li>
                         </ul>
                     </div>
                     <div className="col-sm-6 mb-3">
@@ -27,7 +30,7 @@ function Footer() {
                                 <label htmlFor="newsletter1" className="visually-hidden">Email address</label>
                                 <input id="newsletter1" type="text" className="form-control"
                                        placeholder="Email address"/>
-                                <button className="btn btn-secondary" type="button">Subscribe</button>
+                                <button className="btn btn-danger" type="button">Subscribe</button>
                             </div>
                         </form>
                     </div>
@@ -37,14 +40,14 @@ function Footer() {
                 <div className="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
                     <p>&copy; 2022 Company, Inc. All rights reserved.</p>
                     <ul className="list-unstyled d-flex">
-                        <li className="ms-3"><a className="link-dark" href="#">
-                            <li className="bi-twitter"></li>
+                        <li className="ms-3"><a className="link-dark" href="#/">
+                            <li className="bi-facebook"></li>
                         </a></li>
-                        <li className="ms-3"><a className="link-dark" href="#">
+                        <li className="ms-3"><a className="link-dark" href="#/">
                             <li className="bi-instagram"></li>
                         </a></li>
-                        <li className="ms-3"><a className="link-dark" href="#">
-                            <li className="bi-facebook"></li>
+                        <li className="ms-3"><a className="link-dark" href="#/">
+                            <li className="bi-twitter"></li>
                         </a></li>
                     </ul>
                 </div>

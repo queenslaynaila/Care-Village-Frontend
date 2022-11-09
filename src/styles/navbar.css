@@ -1,34 +1,31 @@
+.navbar {
+    border-bottom: 2px solid #E9EAEA;
+}
 .navbar-brand {
     font-size: larger;
     font-weight: bold;
-    color: #EF506B;
+    color: #dc3545;
 }
 
 .login {
-    border: 2px solid #EF506B;
+    border: 2px solid #dc3545;
     border-radius: 2px;
     padding: 5px 10px 5px 10px;
-    color: #EF506B;
+    color: #dc3545;
 }
 .login:hover {
-    background-color: #EF506B;
+    background-color: #dc3545;
     color: white;
 }
 .signup {
-    background-color: #EF506B;
-    border: 2px solid #EF506B;
+    background-color: #dc3545;
+    border: 2px solid #dc3545;
     padding: 5px 10px 5px 10px;
     color: white;
 }
 .signup:hover {
-    color: inherit;
+    color: #dc3545;
     background-color: inherit;
-    border: 2px solid #EF506B;
+    border: 2px solid #dc3545;
     padding: 5px 10px 5px 10px;
-}
-
-.h-get-started {
-    background-color: #99005c;
-    color: white;
-    border: 1px solid #99005c;
 }
