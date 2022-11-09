@@ -1,6 +1,10 @@
 import React from 'react'
 import "../styles/register.css"
 export default function Register() {
+  function handleClick(e) {
+    e.preventDefault()
+  }
+
   return (
       <div className='main'>
         <div className="logincontainer">
@@ -17,7 +21,7 @@ export default function Register() {
               <div className="underline"></div>
             </div>
             <div className="input-box button">
-             <input type="submit" name="" value="LOG IN"></input>
+             <input type="submit" name="" value="LOG IN" onClick={(e)=>handleClick(e)} ></input>
            </div>
          </form>
          <div className="option">or Connect With Social Media</div>
