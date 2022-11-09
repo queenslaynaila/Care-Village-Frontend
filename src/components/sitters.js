@@ -1,5 +1,5 @@
 import React from "react";
-// import sitterlogo from "../assets/sitter.png";
+import sitterlogo from "../assets/sitter.png";
 import "../styles/sitter.css"; 
 
 
@@ -12,10 +12,9 @@ function Sitters(){
                     {/* sitterdetails */}
                     <div className="row">
                         <div className="card">
-
                             <div className="card-body">
                                 <div className="col-sm-2">
-                                    {/* <img  src={sitterlogo} className="img-fluid" alt=""></img>       */}
+                                    <img  src={sitterlogo} className="img-fluid" alt=""></img>      
                                 </div>
                                 <div className="col-sm-8">
                                     <h5>Queenslay Naila</h5>
@@ -24,15 +23,12 @@ function Sitters(){
                                 
                             </div>
                             <button className="sharebtn">Share</button>
-                            {/* <button className="btn btn-danger" type="button">Subscribe</button> */}
-
                         </div>
-
-
                     </div>
+                    <br/>
+
                     {/* job openings */}
                     <div className="row">
-
                         <div className="card">
                             <div className="card-body">
                                 <h2>Job postings</h2>
@@ -64,33 +60,33 @@ function Sitters(){
                         </div>
 
                     </div>
-                    {/* jobs */}
-                    <div className="row">
-                        <div className="col-sm-8">
-                            <div class="row row-cols-1 row-cols-md-3 g-4">
-                                <div class="col">
-                                    <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Recommended jobs</h5>
-                                        <div class="input-group rounded">
-                                            <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
-                                        </div>
-                                    </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="card h-100">
-                                    <div class="card-body">
-                                        <h5 class="card-title">All jobs</h5>
-                                        <div class="input-group rounded">
-                                            <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
-                                        </div>
-                                    </div>
-                                    </div>
-                                </div>
-                                </div>
-                            
+                    <br/>
 
+                    {/* jobs */}
+                    <div className="row justify-content-center">
+                        <div className="col-sm-8">
+                            <div className="row row-cols-1 row-cols-md-3 g-4">
+                                <div className="col-sm-6 col-md-6 col-lg-6">
+                                    <div className="card">
+                                    <div className="card-body">
+                                        <h5 className="card-title">Recommended jobs</h5>
+                                        <div className="input-group rounded">
+                                            <input type="search" className="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div className="col-sm-6 col-md-6 col-lg-6">
+                                    <div className="card">
+                                    <div className="card-body">
+                                        <h5 className="card-title">All jobs</h5>
+                                        <div className="input-group rounded">
+                                            <input type="search" className="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
                         </div>
                     </div>
                     
