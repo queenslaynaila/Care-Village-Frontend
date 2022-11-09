@@ -4,15 +4,16 @@ import baby from '../assets/baby.svg'
 import pet from '../assets/pet.svg'
 import specialNeeds from '../assets/specialneeds.svg'
 import medical from '../assets/medical.svg'
-
+import {useNavigate} from "react-router-dom"
 function Home() {
+let navigate = useNavigate()
     return (
         <div className="py-5">
             <div className="row mb-5">
                 <div className="col-sm-8 mb-sm-0 mb-5">
                     <h1 className="fw-bold mb-4">Find a service carer near you</h1>
                     <p>Find the right sitter or nanny for your family</p>
-                    <button className="btn btn-danger rounded-0 btn-lg home-get-started-btn">Get Started</button>
+                    <button className="btn btn-danger rounded-0 btn-lg home-get-started-btn"  onClick={() => navigate("/login")}>Get Started</button>
                     <button className="btn btn-outline-secondary rounded-0 btn-lg ms-2 ">I'm a Sitter</button>
                 </div>
                 <div className="col-sm-4">

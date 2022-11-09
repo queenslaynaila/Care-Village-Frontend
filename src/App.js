@@ -1,22 +1,26 @@
-import React from "react";
-import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
-import Navbar from "./components/navbar";
-import Home from "./components/home";
-import Login from "./components/login";
-import Signup from "./components/signup";
-import NotFound from "./components/404";
-
-export default function App() {
-    return (
-        <Router>
-            <Routes>
-                <Route path='/' element={<Navbar/>}>
-                    <Route path='/' element={<Home/>}/>
-                    <Route path='/login' element={<Login/>}/>
-                    <Route path='/signup' element={<Signup/>}/>
-                    <Route path='*' element={<NotFound/>}/> {/* catch 404 urls */}
-                </Route>
-            </Routes>
-        </Router>
-    )
+import CompleteRegister from "./components/CompleteRegister"
+import Register from "./components/Register"
+import Accordion from "./components/accordion"
+export default function Approuter() {
+  const [users,setUsers] =useState([])
+  useEffect(() => {
+    fetch("http://localhost:8000/users")
+    .then(res => res.json())
+    .then(data=>setUsers(data))
+  },[])
+  return (
+    <Router>
+    <Routes>
+        <Route path='/' element={<Navbar/>}>
+            <Route path='/' element={<Home/>}/>
+            <Route path='/login' element={<Register users={users}></Register>}></Route>
+             <Route path='/signup' element={<Signup/>}/>
+            <Route path='/register/complete' element={<CompleteRegister></CompleteRegister>}></Route>
+            <Route path='/help' element={<Accordion></Accordion>}></Route>
+            <Route path='*' element={<NotFound/>}/>
+        </Route>
+    </Routes>
+</Router>
+  )
 }
+ 
