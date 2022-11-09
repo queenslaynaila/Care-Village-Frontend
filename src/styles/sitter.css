@@ -1,0 +1,16 @@
+.sharebtn{
+    background-color: #dc3545;
+    border: none;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    /* display: inline-block; */
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 12px;
+    width: 80px;
+    height: 50px;
+    position: relative;
+    /* float: left; */
+ }
