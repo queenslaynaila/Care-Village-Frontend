@@ -10,6 +10,7 @@ import NotFound from "./components/404";
 import SignupSitter from "./components/signupsitter"
 import SignupClient from "./components/clientsignup"
 import Sitters from "./components/sitters";
+import LockedOut from "./components/lockedout"
 export default function Approuter() {
   const [users,setUsers] =useState([])
   useEffect(() => {
@@ -29,6 +30,7 @@ export default function Approuter() {
             <Route path='/register/complete' element={<CompleteRegister></CompleteRegister>}></Route>
             <Route path='/help' element={<Accordion></Accordion>}></Route>
             <Route path='/help' element={<Accordion></Accordion>}></Route>
+            <Route path='/lockedout' element={<LockedOut></LockedOut>}></Route>
             <Route path='*' element={<NotFound/>}/>
         </Route>
     </Routes>
