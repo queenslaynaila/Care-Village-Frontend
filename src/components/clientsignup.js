@@ -1,8 +1,9 @@
 import React, {useState} from "react";
-import {useNavigate} from "react-router-dom";
+import CompleteRegister from "./CompleteRegister"
+import {useNavigate} from "react-router-dom"
 
 export default function SignupClient() {
-    const navigate = useNavigate()
+    let navigate = useNavigate()
     const url = 'http://localhost:8000/clientregistration'
     const [email, setEmail] = useState('')
     const [username, setUsername] = useState('')
@@ -13,6 +14,7 @@ export default function SignupClient() {
     const [confirmPassword, setConfirmPassword] = useState('')
     const [phoneNumber,setPhoneNumber] = useState('')
     const [error, setError] = useState('')
+    const [client,setClient] = useState(null)
 
     function handleSubmit(e) {
         e.preventDefault()
@@ -37,10 +39,13 @@ export default function SignupClient() {
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(data)
         }).then(res =>res.json())
-        .then(data => console.log(data))
+        .then(data =>setClient(data))
     }
 
     return (
+          <>
+          {client?
+        <CompleteRegister></CompleteRegister>:
         <div className="col-sm-6">
             <h2 className="mb-3">Sign up</h2>
             {error ? <div className="alert alert-warning" role="alert">{error}</div> : null}
@@ -152,5 +157,8 @@ export default function SignupClient() {
                 <button type="submit" className="btn btn-danger">Sign up</button>
             </form>
         </div>
+         }
+          </>
+
     )
 }

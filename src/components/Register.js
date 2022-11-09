@@ -32,7 +32,7 @@ export default function Register({users}) {
   return (
     <>
     {sucess ?(
-       navigate("/register/complete")
+       <p>sucesss</p>
     ):(
     <section className='main'>
     <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
