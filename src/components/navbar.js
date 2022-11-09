@@ -36,9 +36,9 @@ function Navbar() {
                                 </a>
                                 <ul className="dropdown-menu">
                                     <li><a className="dropdown-item fw-bold" href="#/"
-                                           onClick={() => navigate("/client-signup")}>As a Client</a></li>
+                                           onClick={() => navigate("/signup")}>As a Client</a></li>
                                     <li><a className="dropdown-item fw-bold" href="#/"
-                                           onClick={() => navigate("/sitter-signup")}>As a Sitter</a></li>
+                                           onClick={() => navigate("/signup-as-sitter")}>As a Sitter</a></li>
                                 </ul>
                             </li>
                         </ul>

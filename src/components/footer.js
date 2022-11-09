@@ -13,9 +13,9 @@ function Footer() {
                         <h5>Quick Links</h5>
                         <ul className="nav flex-column">
                             <li className="nav-item mb-2"><a href="#/" className="nav-link p-0 text-muted"
-                                onClick={() => navigate("/client-signup")}>Sign up as a Client</a></li>
+                                onClick={() => navigate("/signup")}>Sign up as a Client</a></li>
                             <li className="nav-item mb-2"><a href="#/" className="nav-link p-0 text-muted"
-                                onClick={() => navigate("/sitter-signup")}>Sign up as a Sitter</a></li>
+                                onClick={() => navigate("/signup-as-sitter")}>Sign up as a Sitter</a></li>
                             <li className="nav-item mb-2"><a href="#/" className="nav-link p-0 text-muted"
                                                              onClick={() => navigate("/login")}>Login</a></li>
                             <li className="nav-item mb-2"><a href="#/" className="nav-link p-0 text-muted"
