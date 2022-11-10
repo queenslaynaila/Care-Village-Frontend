@@ -41,13 +41,13 @@ function Footer() {
                     <p>&copy; 2022 Company, Inc. All rights reserved.</p>
                     <ul className="list-unstyled d-flex">
                         <li className="ms-3"><a className="link-dark" href="#/">
-                            <li className="bi-facebook"></li>
+                            <i className="bi-facebook"></i>
                         </a></li>
                         <li className="ms-3"><a className="link-dark" href="#/">
-                            <li className="bi-instagram"></li>
+                            <i className="bi-instagram"></i>
                         </a></li>
                         <li className="ms-3"><a className="link-dark" href="#/">
-                            <li className="bi-twitter"></li>
+                            <i className="bi-twitter"></i>
                         </a></li>
                     </ul>
                 </div>

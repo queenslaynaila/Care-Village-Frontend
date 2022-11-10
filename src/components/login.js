@@ -23,9 +23,7 @@ export default function Login() {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(data)
-        }).then(res => res.json())
-        .then((dta) => console.log(dta))
-         
+        }).then(res => console.log(res))
     }
 
 
