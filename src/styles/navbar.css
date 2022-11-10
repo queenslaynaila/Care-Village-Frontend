@@ -6,6 +6,9 @@
     font-weight: bold;
     color: #dc3545;
 }
+.navbar-brand:hover, .navbar-brand:active, .navbar-brand:focus {
+    color: #dc3545;
+}
 
 .login {
     border: 2px solid #dc3545;
@@ -13,7 +16,7 @@
     padding: 5px 10px 5px 10px;
     color: #dc3545;
 }
-.login:hover {
+.login:hover, .login:active, .login:focus {
     background-color: #dc3545;
     color: white;
 }
@@ -23,7 +26,7 @@
     padding: 5px 10px 5px 10px;
     color: white;
 }
-.signup:hover {
+.signup:hover , .signup:active, .signup:focus {
     color: #dc3545;
     background-color: inherit;
     border: 2px solid #dc3545;

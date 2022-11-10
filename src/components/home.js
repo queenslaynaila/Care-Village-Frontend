@@ -5,23 +5,27 @@ import pet from '../assets/pet.svg'
 import specialNeeds from '../assets/specialneeds.svg'
 import medical from '../assets/medical.svg'
 import {useNavigate} from "react-router-dom"
+
 function Home() {
-let navigate = useNavigate()
+    let navigate = useNavigate()
     return (
         <div className="py-5">
             <div className="row mb-5">
                 <div className="col-sm-8 mb-sm-0 mb-5">
                     <h1 className="fw-bold mb-4">Find a service carer near you</h1>
                     <p>Find the right sitter or nanny for your family</p>
-                    <button className="btn btn-danger rounded-0 btn-lg home-get-started-btn"  onClick={() => navigate("/login")}>Get Started</button>
-                    <button className="btn btn-outline-secondary rounded-0 btn-lg ms-2 ">I'm a Sitter</button>
+                    <button className="btn btn-danger rounded-0 btn-lg home-get-started-btn"
+                            onClick={() => navigate("/signup-as-client")}>Get Started
+                    </button>
+                    <a href="#/" className="btn btn-outline-secondary rounded-0 btn-lg ms-2 text-decoration-none"
+                       onClick={() => navigate("/signup-as-sitter")}>I'm a Sitter</a>
                 </div>
                 <div className="col-sm-4">
                     <img src={grandma} height="250px" width="350px" alt="Grandma"/>
                 </div>
             </div>
             <h1 className="my-5">Categories</h1>
-            <div className="row mt-5 justify-content-between">
+            <div className="row mt-5 ms-sm-0 ms-5">
                 <div className="col-sm-auto mb-2">
                     <div className="card shadow p-2" style={{width: "15rem", alignItems: "center"}}>
                         <img src={baby} height="100px" width="100px" alt="Grandma"/>
@@ -47,22 +51,22 @@ let navigate = useNavigate()
                         <div className="card-body">
                             <h5 className="card-title">Care Companion</h5>
                             <p className="card-text">Specialized care to meet the individual needs of your patient</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div className="col-auto mb-2">
-                <div className="card shadow p-2" style={{width: "15rem", alignItems: "center"}}>
-                    <img src={specialNeeds} height="100px" width="100px" alt="Grandma"/>
-                    <div className="card-body">
-                        <h5 className="card-title">Special Needs</h5>
-                        <p className="card-text">Specialized care to meet the individual needs of your child</p>
+                <div className="col-auto mb-2">
+                    <div className="card shadow p-2" style={{width: "15rem", alignItems: "center"}}>
+                        <img src={specialNeeds} height="100px" width="100px" alt="Grandma"/>
+                        <div className="card-body">
+                            <h5 className="card-title">Special Needs</h5>
+                            <p className="card-text">Specialized care to meet the individual needs of your child</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-</div>
 
-)
+    )
 }
 
 export default Home;

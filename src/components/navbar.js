@@ -24,21 +24,17 @@ function Navbar() {
                             <li className="nav-item">
                                 <a className="nav-link" href="#/" onClick={() => navigate("/help")}>Help</a>
                             </li>
-                            <li className="nav-item ms-sm-3 mb-sm-0 mb-2">
-                                <a className="nav-link login" href="#/"
-                                   onClick={() => navigate("/login")}>
-                                    Login</a>
+                            <li className="nav-item ms-sm-3 mb-sm-0 mb-2 d-inline-flex">
+                                <a className="nav-link login" href="#/" onClick={() => navigate("/login")}>Login</a>
                             </li>
-                            <li className="nav-item dropdown ms-sm-3">
+                            <li className="nav-item dropdown ms-sm-3 d-inline-flex">
                                 <a className="nav-link signup dropdown-toggle"
-                                   href="#/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Signup
-                                </a>
+                                   href="#/" role="button" data-bs-toggle="dropdown" aria-expanded="false">Signup</a>
                                 <ul className="dropdown-menu">
                                     <li><a className="dropdown-item fw-bold" href="#/"
-                                           onClick={() => navigate("/registerclient")}>As a Client</a></li>
+                                           onClick={() => navigate("/signup-as-client")}>As a Client</a></li>
                                     <li><a className="dropdown-item fw-bold" href="#/"
-                                           onClick={() => navigate("/signupsitter")}>As a Sitter</a></li>
+                                           onClick={() => navigate("/signup-as-sitter")}>As a Sitter</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -49,7 +45,7 @@ function Navbar() {
                 <Outlet/>
             </div>
             <div className="container col-sm-9">
-                <Footer />
+                <Footer/>
             </div>
         </div>
     )

@@ -9,47 +9,60 @@ export default function SignupSitter() {
     const [firstName, setFirstName] = useState('')
     const [lastName, setLastName] = useState('')
     const [gender, setGender] = useState('')
-    const [phoneNumber, setPhoneNumber] = useState()
-    const [yearOfBirth, setYearOfBirth] = useState()
-    const [age, setAge] = useState()
+    const [phoneNumber, setPhoneNumber] = useState('')
+    const [yearOfBirth, setYearOfBirth] = useState('')
+    const [age, setAge] = useState('')
     const [location, setLocation] = useState('')
     const [password, setPassword] = useState('')
     const [confirmPassword, setConfirmPassword] = useState('')
     const [error, setError] = useState('')
+    const [success, setSuccess] = useState('')
 
     function handleSubmit(e) {
         e.preventDefault()
         let data;
         if (password === confirmPassword) {
             data = {
-                firstname:firstName,
-                lastname:lastName,
+                firstname: firstName,
+                lastname: lastName,
                 username: username,
-                gender:gender,
+                gender: gender,
                 email: email,
-                phonenumber:phoneNumber,
-                yearOfBirth:phoneNumber,
-                age:age,
-                location:location,
-                password:password
+                phonenumber: phoneNumber,
+                yearofbirth: yearOfBirth,
+                age: age,
+                location: location,
+                password: password
             }
-
         } else {
             setError("Passwords do not match")
         }
-
         fetch(url, {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(data)
-        }).then(res => console.log(res.json()))
-        .then(data => navigate('/login'))
+        }).then(res => {
+            console.log(res)
+            if (res.ok) setSuccess("Signup Success")
+            if (!res.ok) setError("Sign up failed. Try again")
+            setEmail('');
+            setPassword('');
+            setConfirmPassword('');
+            setFirstName('');
+            setLastName('');
+            setUsername('');
+            setLocation('');
+            setPhoneNumber('');
+            setYearOfBirth('')
+            setAge('')
+        })
     }
 
     return (
         <div className="col-sm-6">
-            <h2 className="mb-3">Sign up</h2>
-            {error ? <div className="alert alert-warning" role="alert">{error}</div> : null}
+            <h2 className="mb-3">Sign up as Sitter</h2>
+            {error ? <div className="alert alert-danger" role="alert">{error}</div> : null}
+            {success ? <div className="alert alert-success" role="alert">{success}</div> : null}
             <form onSubmit={handleSubmit}>
                 <div className="row mb-2">
                     <div className="col">
@@ -124,25 +137,15 @@ export default function SignupSitter() {
                     </div>
                 </div>
                 <div className="row mb-2">
-                    <div className="col">
+                    <div className="col-sm-6">
+                        <label className="form-label" htmlFor="yearofbirth">Date Of Birth</label>
                         <input
-                            type="text"
+                            type="date"
                             className="form-control"
                             id="yearofbirth"
                             placeholder="Year of Birth"
                             value={yearOfBirth}
                             onChange={(e) => setYearOfBirth(e.target.value)}
-                            required
-                        />
-                    </div>
-                    <div className="col">
-                        <input
-                            type="text"
-                            className="form-control"
-                            id="age"
-                            placeholder="Age"
-                            value={age}
-                            onChange={(e) => setAge(e.target.value)}
                             required
                         />
                     </div>
@@ -178,8 +181,14 @@ export default function SignupSitter() {
                             Login here
                         </a>
                     </p>
+                    <p className="my-3">
+                        Sign up as a {' '}
+                        <a href="#/" className="text-decoration-none" onClick={() => navigate("/signup-as-client")}>
+                            Client
+                        </a>
+                    </p>
                 </div>
-                <button   type="submit" className="btn btn-danger">Sign up</button>
+                <button type="submit" className="btn btn-danger">Sign up</button>
             </form>
         </div>
     )
