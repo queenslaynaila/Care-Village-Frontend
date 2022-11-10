@@ -12,6 +12,7 @@ import SignupClient from "./components/clientsignup"
 import Sitters from "./components/sitters";
 import LockedOut from "./components/lockedout"
 import DashboardForClient from "./components/clientui"
+import Jobsform from "./components/Jobsform"
 export default function Approuter() {
   const [users,setUsers] =useState([])
   useEffect(() => {
@@ -33,6 +34,7 @@ export default function Approuter() {
             <Route path='/help' element={<Accordion></Accordion>}></Route>
             <Route path='/clientdashboard' element={<DashboardForClient></DashboardForClient>}></Route>
             <Route path='/lockedout' element={<LockedOut></LockedOut>}></Route>
+            <Route path='/jobregister' element={<Jobsform></Jobsform>}></Route>
             <Route path='*' element={<NotFound/>}/>
         </Route>
     </Routes>

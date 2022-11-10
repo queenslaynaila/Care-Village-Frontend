@@ -9,7 +9,7 @@ export default function CompleteRegister() {
   let navigate = useNavigate()
   function handleClick(e){
     e.preventDefault()
-
+    navigate("/jobregister")
   }
   function redirect(e){
     navigate("/clientdashboard")
