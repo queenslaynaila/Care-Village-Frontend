@@ -8,6 +8,9 @@ import {useNavigate} from "react-router-dom"
 
 function Home() {
     let navigate = useNavigate()
+    function handleClick(e) {
+        navigate("/browsesitter");
+    }
     return (
         <div className="py-5">
             <div className="row mb-5">
@@ -33,6 +36,7 @@ function Home() {
                             <h5 className="card-title">Baby Sitter</h5>
                             <p className="card-text">Regular support for after-school, weekdays, and weekends</p>
                         </div>
+                        <button type="button" class="btn btn-danger" onClick={(e)=>handleClick(e)}>Explore</button>
                     </div>
                 </div>
                 <div className="col-auto mb-2">
@@ -43,6 +47,7 @@ function Home() {
                             <p className="card-text">Occasional help with last-minute needs, date night and
                                 more</p>
                         </div>
+                        <button type="button" class="btn btn-danger" onClick={(e)=>handleClick(e)}>Explore</button>
                     </div>
                 </div>
                 <div className="col-auto mb-2">
@@ -52,6 +57,7 @@ function Home() {
                             <h5 className="card-title">Care Companion</h5>
                             <p className="card-text">Specialized care to meet the individual needs of your patient</p>
                         </div>
+                        <button type="button" class="btn btn-danger" onClick={(e)=>handleClick(e)}>Explore</button>
                     </div>
                 </div>
                 <div className="col-auto mb-2">
@@ -61,6 +67,7 @@ function Home() {
                             <h5 className="card-title">Special Needs</h5>
                             <p className="card-text">Specialized care to meet the individual needs of your child</p>
                         </div>
+                        <button type="button" class="btn btn-danger" onClick={(e)=>handleClick(e)}>Explore</button>
                     </div>
                 </div>
             </div>
