@@ -1,0 +1,36 @@
+.wrapcontainer{
+    width: 500px;
+    padding-top: 30px;
+    padding: 24px;
+    padding-bottom: 30px;
+    line-height: 1.5;
+    box-sizing: border-box;
+    box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+    align-items: center;
+    margin-left: 25%;
+    margin-right:25%;
+}
+.processerror{
+    color: #464646;
+    text-align: center;
+}
+.errorimg{
+    margin-left: 40%;
+    margin-right:50%;
+    align-self: center;
+}
+
+.processerrorbtn{
+    border: none;
+    outline: none;
+    padding: 15px;
+    width: 100%;
+
+}
+.soory{
+
+    font-size: 16px;
+    font-weight: 400;
+    color: #282930;
+    margin-bottom: 16px;
+  }
