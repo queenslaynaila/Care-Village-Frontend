@@ -9,6 +9,7 @@ export default function Login() {
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
+    const [user, setUser] = useState('')
 
     function handleSubmit(e) {
         e.preventDefault()
@@ -21,14 +22,23 @@ export default function Login() {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(data)
-        }).then(res => {
-            console.log(res.json())
-            if (res.ok) setSuccess("Signup Success")
-            if (!res.ok) setError("Sign up failed. Try again")
-            setUserName('');
-            setPassword('');
-            navigate('/reactdashboard')
         })
+            .then(res => res.json())
+            .then(data => {
+                console.log('r', data)
+                if (data === null) {
+                    setError("Sign up failed. Try again")
+                } else if (data.id) {
+                    localStorage.setItem('user', JSON.stringify(data))
+                    setSuccess("Signup Success")
+                    navigate('/sitters-dashboard')
+                    navigate(0)
+                } else {
+                    setError("Sign up failed. Try again")
+                }
+                setUserName('');
+                setPassword('');
+            })
     }
 
     return (

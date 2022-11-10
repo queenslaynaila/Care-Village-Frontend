@@ -19,8 +19,8 @@ export default function App() {
                     <Route path='/signup-as-sitter' element={<SignupSitter/>}/>
                     <Route path='/signup-as-client' element={< SignupClient/>}/>
                     <Route path='/help' element={<Accordion/>}></Route>
-                    <Route path='/sitterdash' element={<Sitters/>}></Route>
-                    <Route path='/clientdash' element={<DashboardForClient/>}></Route>
+                    <Route path='/sitters-dashboard' element={<Sitters/>}></Route>
+                    <Route path='/clients-dashboard' element={<DashboardForClient/>}></Route>
                     <Route path='*' element={<NotFound/>}/>
                 </Route>
             </Routes>

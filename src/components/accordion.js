@@ -10,14 +10,14 @@ const AccordionSection = styled.div`
   align-items: center;
   justify-content: center;
   position: relative;
-  height: 100vh;
+  height: 60vh;
   background: #fff;
 `;
 
 const Container = styled.div`
   position: absolute;
   top: 5%;
-  box-shadow: 2px 10px 35px 1px rgba(153, 153, 153, 0.3);
+  box-shadow: 2px 2px 2px 2px rgba(153, 153, 153, 0.3);
 `;
 
 const Wrap = styled.div`
