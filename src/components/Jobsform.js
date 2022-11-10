@@ -8,7 +8,7 @@ import { Grid, Card,Paper, MenuItem,Avatar, Typography, TextField, Checkbox ,But
      CareNeeded: "",
     loation: "",
     schedule: "",
-    peopleCount:0,
+    peopleCount:"",
                };
   const CareNeeded=[{
     label :"BabySitter",
