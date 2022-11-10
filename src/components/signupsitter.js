@@ -34,28 +34,36 @@ export default function SignupSitter() {
                 location: location,
                 password: password
             }
+            fetch(url, {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify(data)
+            }).then(res => {
+                console.log(res)
+                if (res.ok) {
+                    setSuccess("Signup Success")
+                    navigate('/login', {
+                        state: {
+                            message: "Signup was Successful, you can now login."
+                        }
+                    })
+                } else {
+                    setError("Sign up failed. Try again")
+                }
+                setEmail('');
+                setPassword('');
+                setConfirmPassword('');
+                setFirstName('');
+                setLastName('');
+                setUsername('');
+                setLocation('');
+                setPhoneNumber('');
+                setYearOfBirth('')
+                setAge('')
+            })
         } else {
             setError("Passwords do not match")
         }
-        fetch(url, {
-            method: 'POST',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify(data)
-        }).then(res => {
-            console.log(res)
-            if (res.ok) setSuccess("Signup Success")
-            if (!res.ok) setError("Sign up failed. Try again")
-            setEmail('');
-            setPassword('');
-            setConfirmPassword('');
-            setFirstName('');
-            setLastName('');
-            setUsername('');
-            setLocation('');
-            setPhoneNumber('');
-            setYearOfBirth('')
-            setAge('')
-        })
     }
 
     return (

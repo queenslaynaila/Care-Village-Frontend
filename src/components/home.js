@@ -1,4 +1,4 @@
-import React from "react";
+import {React, useEffect, useState} from "react";
 import grandma from '../assets/grandma.svg'
 import baby from '../assets/baby.svg'
 import pet from '../assets/pet.svg'
@@ -8,17 +8,53 @@ import {useNavigate} from "react-router-dom"
 
 function Home() {
     let navigate = useNavigate()
+    const [user, setUser] = useState('');
+
+    useEffect(() => {
+        const user = JSON.parse(localStorage.getItem('user'));
+        if (user) setUser(user)
+    }, []);
+
     return (
         <div className="py-5">
             <div className="row mb-5">
                 <div className="col-sm-8 mb-sm-0 mb-5">
-                    <h1 className="fw-bold mb-4">Find a service carer near you</h1>
-                    <p>Find the right sitter or nanny for your family</p>
-                    <button className="btn btn-danger rounded-0 btn-lg home-get-started-btn"
-                            onClick={() => navigate("/signup-as-client")}>Get Started
-                    </button>
-                    <a href="#/" className="btn btn-outline-secondary rounded-0 btn-lg ms-2 text-decoration-none"
-                       onClick={() => navigate("/signup-as-sitter")}>I'm a Sitter</a>
+                    {user ?
+                        <>
+                            {user.usertype === 'client'?
+                                <>
+                                <h1 className="fw-bold mb-4">Find a service carer near you</h1>
+                                <p>Find the right sitter or nanny for your family</p>
+                            <a href="#/" className="btn btn-danger rounded-0 btn-lg home-get-started-btn"
+                               onClick={() => navigate("/offers")}>
+                                <i className="bi bi-search"/> Search Sitters
+                            </a>
+                                </>
+                                :
+                                <>
+                                    <h1 className="fw-bold mb-4">Find jobs near you</h1>
+                                    <p>Determine your own schedule and rate</p>
+                                <a href="#/" className="btn btn-danger rounded-0 btn-lg home-get-started-btn"
+                                   onClick={() => navigate("/offers")}>
+                                    <i className="bi bi-folder-fill"/> Offers Received
+                                </a>
+                                </>
+                            }
+                            <a href="#/"
+                               className="btn btn-outline-secondary rounded-0 btn-lg ms-2 text-decoration-none"
+                               onClick={() => navigate("/profile")}><i className="bi bi-gear"> Settings</i>
+                            </a>
+                        </>
+                        :
+                        <>
+                            <a href="#/" className="btn btn-danger rounded-0 btn-lg home-get-started-btn"
+                               onClick={() => navigate("/signup-as-client")}>Get Started
+                            </a>
+                            <a href="#/"
+                               className="btn btn-outline-secondary rounded-0 btn-lg ms-2 text-decoration-none"
+                               onClick={() => navigate("/signup-as-sitter")}>I'm a Sitter</a>
+                        </>
+                        }
                 </div>
                 <div className="col-sm-4">
                     <img src={grandma} height="250px" width="350px" alt="Grandma"/>

@@ -30,26 +30,34 @@ export default function SignupClient() {
                 password: password
             }
             setError("")
+            fetch(url, {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify(data)
+            }).then(res => {
+                console.log(res)
+                if (res.ok) {
+                    setSuccess("Signup Success")
+                    navigate('/login', {
+                        state: {
+                            message: "Signup was Successful, you can now login."
+                        }
+                    })
+                } else {
+                    setError("Sign up failed. Try again")
+                }
+                setEmail('');
+                setPassword('');
+                setConfirmPassword('');
+                setFirstName('');
+                setLastName('');
+                setUsername('');
+                setLocation('');
+                setPhoneNumber('');
+            })
         } else {
             setError("Passwords do not match")
         }
-        fetch(url, {
-            method: 'POST',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify(data)
-        }).then(res => {
-            console.log(res)
-            if (res.ok) setSuccess("Signup Success")
-            if (!res.ok) setError("Sign up failed. Try again")
-            setEmail('');
-            setPassword('');
-            setConfirmPassword('');
-            setFirstName('');
-            setLastName('');
-            setUsername('');
-            setLocation('');
-            setPhoneNumber('');
-        })
     }
 
     return (
@@ -109,30 +117,6 @@ export default function SignupClient() {
                 <div className="row mb-2">
                     <div className="col">
                         <input
-                            type="password"
-                            className="form-control"
-                            id="password"
-                            placeholder="Password"
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
-                            required
-                        />
-                    </div>
-                    <div className="col">
-                        <input
-                            type="password"
-                            className="form-control"
-                            id="confirmPassword"
-                            placeholder="Confirm Password"
-                            value={confirmPassword}
-                            onChange={(e) => setConfirmPassword(e.target.value)}
-                            required
-                        />
-                    </div>
-                </div>
-                <div className="row mb-2">
-                    <div className="col">
-                        <input
                             type="text"
                             className="form-control"
                             id="location"
@@ -154,6 +138,30 @@ export default function SignupClient() {
                         />
                     </div>
                 </div>
+                <div className="row mb-2">
+                    <div className="col">
+                        <input
+                            type="password"
+                            className="form-control"
+                            id="password"
+                            placeholder="Password"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            required
+                        />
+                    </div>
+                    <div className="col">
+                        <input
+                            type="password"
+                            className="form-control"
+                            id="confirmPassword"
+                            placeholder="Confirm Password"
+                            value={confirmPassword}
+                            onChange={(e) => setConfirmPassword(e.target.value)}
+                            required
+                        />
+                    </div>
+                </div>
                 <div>
                     <p className="my-3">
                         Already have an account?{' '}
@@ -162,7 +170,7 @@ export default function SignupClient() {
                         </a>
                     </p>
                     <p className="my-3">
-                         Sign up as a {' '}
+                        Sign up as a {' '}
                         <a href="#/" className="text-decoration-none" onClick={() => navigate("/signup-as-sitter")}>
                             Sitter
                         </a>

@@ -35,20 +35,22 @@ function Navbar() {
                         <ul className="navbar-nav fw-bold ms-auto mb-2 mb-lg-0">
                             <li className="nav-item">
                                 <a className="nav-link" href="#/" onClick={() => navigate("/help")}>
-                                    <i className="bi bi-question-diamond"/> Help</a>
+                                    <i className="bi bi-question-diamond-fill"/> Help</a>
                             </li>
                             {user ?
                                 <>
                                     {user.usertype === 'client' ?
                                         <li className="nav-item">
-                                            <a className="nav-link" href="#/" onClick={() => navigate("/offers")}>
-                                                <i className="bi bi-send"/> Offers Sent
+                                            <a className="nav-link" href="#/"
+                                               onClick={() => navigate("/offers")}>
+                                                <i className="bi bi-search"/> Search
                                             </a>
                                         </li>
                                         :
                                         <li className="nav-item">
-                                            <a className="nav-link" href="#/" onClick={() => navigate("/offers")}>
-                                                <i className="bi bi-folder-plus"/> Offers Received
+                                            <a className="nav-link" href="#/"
+                                               onClick={() => navigate("/offers")}>
+                                                <i className="bi bi-file-earmark-plus-fill"/> Create job offer
                                             </a>
                                         </li>
                                     }
@@ -61,6 +63,25 @@ function Navbar() {
                                         <i className="bi bi-person-fill"></i>{user.username}
                                     </a>
                                     <ul className="dropdown-menu">
+                                        {user ?
+                                            <>
+                                                {user.usertype === 'client' ?
+                                                    <li>
+                                                        <a className="dropdown-item fw-bold" href="#/"
+                                                           onClick={() => navigate("/offers")}>
+                                                            <i className="bi bi-send-fill"/> Offers Sent
+                                                        </a>
+                                                    </li>
+                                                    :
+                                                    <li>
+                                                        <a className="dropdown-item fw-bold" href="#/"
+                                                           onClick={() => navigate("/offers")}>
+                                                            <i className="bi bi-folder-fill"/> Offers Received
+                                                        </a>
+                                                    </li>
+                                                }
+                                            </>
+                                            : null}
                                         <li>
                                             <a className="dropdown-item fw-bold" href="#/"
                                                onClick={() => navigate("/profile")}>

@@ -1,15 +1,24 @@
-import React from "react";
+import {React, useEffect} from "react";
 import {useState} from "react";
-import {useNavigate} from "react-router-dom";
+import {useLocation, useNavigate} from "react-router-dom";
+let message
 
 export default function Login() {
     const navigate = useNavigate()
+    const location = useLocation()
     const url = 'http://localhost:8000/users'
     const [username, setUserName] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
     const [user, setUser] = useState('')
+
+    useEffect(() => {
+        if (location.state !== null) {
+            message = location.state.message
+            setSuccess(message)
+        }
+    })
 
     function handleSubmit(e) {
         e.preventDefault()
