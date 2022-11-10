@@ -3,8 +3,8 @@ import sitterlogo from "../assets/sitter.png";
 import "../styles/citter.css";
 
 
-function DashboardForClient({client}){
-  console.log(client)
+function DashboardForClient(){
+
 
     return (
         <React.Fragment>
@@ -14,13 +14,13 @@ function DashboardForClient({client}){
                   <div  id="userdetails">
                     <div id="userdash">
                      <div id="avatar">
-                       <div id="subavatar">{client.username.charAt(0).toUpperCase()}</div>
+                       <div id="subavatar">Q</div>
                      </div>
                      <div   >
-                           <p  id="fvemployername">{client.username}</p>
+                           <p  id="fvemployername">Queenslay</p>
                            <p className="fvemployerdetails"><span>soilatorome@gmail.com</span></p>
                            <p className="fvemployername">
-                            <span> Since {client.created_at}</span>
+                            <span> Since January</span>
                            </p>
                            <div id="dashbtn">
                             <div id="dashbtnleft">
