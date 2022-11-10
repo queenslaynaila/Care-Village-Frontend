@@ -27,6 +27,7 @@ export default function Login() {
             if (!res.ok) setError("Sign up failed. Try again")
             setUserName('');
             setPassword('');
+            navigate('/reactdashboard')
         })
     }
 
