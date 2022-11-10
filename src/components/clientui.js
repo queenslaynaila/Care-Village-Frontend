@@ -9,23 +9,23 @@ function DashboardForClient(){
         <React.Fragment>
             <h1> Dashboard</h1>
              <div >
-                <div className="col-lg">
-                  <div className="userdetails">
-                    <div className="userdash">
-                     <div className="avatar">
-                       <div className="subavatar">Q</div>
+                <div className="client"  >
+                  <div  id="userdetails">
+                    <div id="userdash">
+                     <div id="avatar">
+                       <div id="subavatar">Q</div>
                      </div>
-                     <div className="col-lg-10 col-sm-10 col-9 one" >
-                           <p className="fvemployername">Queenslay</p>
+                     <div   >
+                           <p  id="fvemployername">Queenslay</p>
                            <p className="fvemployerdetails"><span>mayerdaphney@gmail.com</span></p>
                            <p className="fvemployername">
                             <span> since 09-11-2022</span>
                            </p>
-                           <div className="dashbtn">
-                            <div className="dashbtnleft">
+                           <div id="dashbtn">
+                            <div id="dashbtnleft">
 
                             </div>
-                            <div className="dashbtnright">
+                            <div id="dashbtnright">
                                 <button  className="dashbtns">View JObs</button>
                                 <button  className="dashbtns">POST JObs</button>
                             </div>
@@ -33,8 +33,8 @@ function DashboardForClient(){
                      </div>
                     </div>
                   </div>
-                  <div className="dropdown">
-                  <div className="userdetails2">
+                  <div id="dropdown">
+                  <div id="userdetails2">
                         <h5><span>JOBS POSTED BY ME</span></h5>
                         <hr></hr>
                         <p><a>Help Center</a></p>
@@ -44,15 +44,15 @@ function DashboardForClient(){
                   </div>
                 </div>
 
-                    <div className="col-lg-3" style={{gap:"10px"}}>
-                     <div className="updatecard">
+                    <div>
+                     <div id="updatecard">
                         <h5><span>Required</span></h5>
                         <hr></hr>
                         <p><a>Update Email</a></p>
                         <p><a>Update all Details</a></p>
 
                      </div>
-                     <div className="updatecard" style={{marginTop:"20px"}}>
+                     <div  >
                         <h5><span>Account Settings</span></h5>
                         <hr></hr>
                         <p><a>Help Center</a></p>
