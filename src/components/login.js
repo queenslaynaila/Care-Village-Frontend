@@ -22,7 +22,7 @@ export default function Login() {
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(data)
         }).then(res => {
-            console.log(res)
+            console.log(res.json())
             if (res.ok) setSuccess("Signup Success")
             if (!res.ok) setError("Sign up failed. Try again")
             setUserName('');
