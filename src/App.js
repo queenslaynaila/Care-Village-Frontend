@@ -1,11 +1,11 @@
-import Accordion from "./components/accordion"
+import Accordion from "./ sitter.js/accordion"
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
-import Navbar from "./components/navbar";
-import Home from "./components/home";
-import Login from "./components/login"
-import NotFound from "./components/404";
-import SignupSitter from "./components/signupsitter"
-import SignupClient from "./components/clientsignup"
+import Navbar from "./ sitter.js/navbar";
+import Home from "./ sitter.js/home";
+import Login from "./ sitter.js/login"
+import NotFound from "./ sitter.js/404";
+import SignupSitter from "./ sitter.js/signupsitter"
+import SignupClient from "./ sitter.js/clientsignup"
 
 export default function App() {
     return (
