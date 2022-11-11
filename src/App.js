@@ -9,6 +9,9 @@ import SignupSitter from "./components/signupsitter"
 import SignupClient from "./components/clientsignup"
 import Sitters from "./components/sitters";
 import DashboardForClient from "./components/clientui";
+import JobDetailsForm from "./components/jobdetailsform";
+import Jobofferform from "./components/jobofferform";
+
 import SittersCard from "./components/sitterscard";
 import BrowseSitter from "./components/browsesitter";
 export default function App() {
@@ -23,6 +26,9 @@ export default function App() {
                     <Route path='/help' element={<Accordion/>}></Route>
                     <Route path='/sitters-dashboard' element={<Sitters/>}></Route>
                     <Route path='/clients-dashboard' element={<DashboardForClient/>}></Route>
+                    <Route path='/jobdetailsform' element={<JobDetailsForm/>}/>
+                    <Route path='/Jobofferform' element={<Jobofferform/>}/>
+
                     <Route path='*' element={<NotFound/>}/>
                     <Route path='/sitterscard' element={<SittersCard/>}></Route>
                     <Route path='/browsesitter' element={<BrowseSitter/>}></Route>
