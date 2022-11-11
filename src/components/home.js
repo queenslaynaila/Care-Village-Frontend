@@ -14,11 +14,13 @@ function Home() {
         const user = JSON.parse(localStorage.getItem('user'));
         if (user) setUser(user)
     }, []);
+
     function handleClick(e) {
         navigate("/browsesitter");
     }
+
     return (
-        <div className="py-5">
+        <div className="pt-4 mb-5">
             <div className="row mb-5">
                 <div className="col-sm-8 mb-sm-0 mb-5">
                     {user ?
@@ -61,48 +63,52 @@ function Home() {
                     }
                 </div>
                 <div className="col-sm-4">
-                    <img src={grandma} height="250px" width="350px" alt="Grandma"/>
+                    <img src={grandma} height="200px" width="auto" alt="Grandma"/>
                 </div>
             </div>
-            <h1 className="my-5">Categories</h1>
-            <div className="row mt-5 ms-sm-0 ms-5">
-                <div style={{cursor:"pointer"}} onClick={(e)=>handleClick(e)} className="col-sm-auto mb-2">
-                    <div className="card shadow p-2" style={{width: "15rem", alignItems: "center"}}>
+            <div className="row d-flex p-sm-0 p-3">
+                <h3 className="ps-0">Categories</h3>
+                <div style={{cursor: "pointer"}} onClick={(e) => handleClick(e)}
+                     className="col-sm-3 p-1 mb-2">
+                    <div className="card shadow p-1" style={{width: "auto", alignItems: "center"}}>
                         <img src={baby} height="100px" width="100px" alt="Grandma"/>
                         <div className="card-body">
                             <h5 className="card-title">Baby Sitter</h5>
-                            <p className="card-text">Regular support for after-school, weekdays, and weekends</p>
+                            <p className="card-text fst-italic">Regular support for after-school, weekdays, and weekends</p>
                         </div>
 
                     </div>
                 </div>
-                <div style={{cursor:"pointer"}} onClick={(e)=>handleClick(e)} className="col-auto mb-2">
-                    <div className="card shadow p-2" style={{width: "15rem", alignItems: "center"}}>
+                <div style={{cursor: "pointer"}} onClick={(e) => handleClick(e)}
+                     className="col-sm-3 p-1 mb-2">
+                    <div className="card shadow p-2" style={{width: "auto", alignItems: "center"}}>
                         <img src={pet} height="100px" width="100px" alt="Grandma"/>
                         <div className="card-body">
                             <h5 className="card-title">Pet Sitter</h5>
-                            <p className="card-text">Occasional help with last-minute needs, date night and
+                            <p className="card-text fst-italic">Occasional help with last-minute needs, date night and
                                 more</p>
                         </div>
 
                     </div>
                 </div>
-                <div style={{cursor:"pointer"}} onClick={(e)=>handleClick(e)} className="col-auto mb-2">
-                    <div className="card shadow p-2" style={{width: "15rem", alignItems: "center"}}>
+                <div style={{cursor: "pointer"}} onClick={(e) => handleClick(e)}
+                     className="col-sm-3 p-1 mb-2">
+                    <div className="card shadow p-2" style={{width: "auto", alignItems: "center"}}>
                         <img src={medical} height="100px" width="100px" alt="Grandma"/>
                         <div className="card-body">
                             <h5 className="card-title">Care Companion</h5>
-                            <p className="card-text">Specialized care to meet the individual needs of your patient</p>
+                            <p className="card-text fst-italic">Specialized care to meet the individual needs of your patient</p>
                         </div>
 
                     </div>
                 </div>
-                <div style={{cursor:"pointer"}} onClick={(e)=>handleClick(e)} className="col-auto mb-2">
-                    <div className="card shadow p-2" style={{width: "15rem", alignItems: "center"}}>
+                <div style={{cursor: "pointer"}} onClick={(e) => handleClick(e)}
+                     className="col-sm-3 p-1 mb-2">
+                    <div className="card shadow p-1" style={{width: "auto", alignItems: "center"}}>
                         <img src={specialNeeds} height="100px" width="100px" alt="Grandma"/>
                         <div className="card-body">
                             <h5 className="card-title">Special Needs</h5>
-                            <p className="card-text">Specialized care to meet the individual needs of your child</p>
+                            <p className="card-text fst-italic">Specialized care to meet the individual needs of your child</p>
                         </div>
 
                     </div>
