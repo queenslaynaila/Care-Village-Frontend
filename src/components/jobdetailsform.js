@@ -121,7 +121,7 @@ import { useNavigate } from 'react-router-dom'
               Form submitted successfully
               </Alert>
             </Snackbar>
-            <Button   onClick={() => { navigate('/clientdash') }}type='submit' variant='contained' color='primary'>Return to Dashboard</Button>
+            <Button   onClick={() => { navigate('/clients-dashboard') }}type='submit' variant='contained' color='primary'>Return to Dashboard</Button>
             
         </Grid>
 

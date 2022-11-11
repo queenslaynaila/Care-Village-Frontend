@@ -63,7 +63,7 @@ export default function Jobofferform() {
                 setcomfortabilityWorkingOutsidelocation("");            
                 setworkExperience("");
                 setLanguages("");
-                navigate("/sitterdash");
+                navigate("/sitter-dashboard");
             }
         })
     }
@@ -235,7 +235,7 @@ export default function Jobofferform() {
                 <button type="submit" className="btn btn-danger">Submit</button>
             </form>
             <div style={{ paddingTop: '25px' }}>
-            <button  onClick={() => { navigate('/sitterdash') }}type="submit" className="btn btn-danger">Return to Dashboard</button>
+            <button  onClick={() => { navigate('/sitters-dashboard') }}type="submit" className="btn btn-danger">Return to Dashboard</button>
             </div>
         </div>
     )
