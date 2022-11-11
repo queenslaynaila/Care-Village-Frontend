@@ -39,8 +39,11 @@ export default function Login() {
                     setError("Sign up failed. Try again")
                 } else if (data.id) {
                     localStorage.setItem('user', JSON.stringify(data))
-                    setSuccess("Signup Success")
-                    navigate('/sitters-dashboard')
+                    navigate('/profile', {
+                        state: {
+                            message: "Login Success!"
+                        }
+                    })
                     navigate(0)
                 } else {
                     setError("Sign up failed. Try again")

@@ -16,7 +16,11 @@ function Navbar() {
     function logout() {
         localStorage.removeItem('user');
         if (user) setUser('')
-        navigate('/login')
+        navigate('/login', {
+            state: {
+                message: "Logout Success!"
+            }
+        })
     }
 
     return (
@@ -43,7 +47,7 @@ function Navbar() {
                                         <li className="nav-item">
                                             <a className="nav-link" href="#/"
                                                onClick={() => navigate("/offers")}>
-                                                <i className="bi bi-search"/> Search
+                                                <i className="bi bi-search"/> Search sitters
                                             </a>
                                         </li>
                                         :
