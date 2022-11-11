@@ -1,6 +1,8 @@
-#  PROJECT NAME
+# PROJECT NAME
 
 CARE VILLAGE
+## BACKEND LINK
+The backend for the project is at https://github.com/queenslaynaila/Care-Village-Backend
 
 ## Table of Contents
 
@@ -10,6 +12,7 @@ CARE VILLAGE
 4. [How to use the website](#how-to-use-the-website)
 5. [Licence](#licence)
 6. [AuthorS info](#authorS-info)
+ 
 
 # DESCRIPTION
 
@@ -46,6 +49,5 @@ Copyright (c) 2022 Jema Queenslay Naila
 ## CONTACT INFO
 For any query contact either of them at queenslayjema@gmail.com,ann.mwangi@student.moringaschool.com,brian.wangombe@student.moringaschool.com,sammy.wekesa@student.moringaschool.com,stephen.onchieku@student.moringaschool.com,soila.torome@student.moringaschool.com.
 
-## BACKEND LINK
-The backend for the project is at https://github.com/queenslaynaila/Care-Village-Backend
+
 
