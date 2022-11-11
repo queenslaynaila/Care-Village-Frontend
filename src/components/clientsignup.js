@@ -26,7 +26,7 @@ export default function SignupClient() {
                 username: username,
                 location: location,
                 email: email,
-                phoneNumber: phoneNumber,
+                phonenumber: phoneNumber,
                 password: password
             }
             setError("")

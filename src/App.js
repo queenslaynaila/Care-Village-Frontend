@@ -6,6 +6,7 @@ import Home from "./components/home";
 import Login from "./components/login"
 import NotFound from "./components/404";
 import Profile from "./components/profile";
+import Offers from "./components/offers";
 import SignupSitter from "./components/signupsitter"
 import SignupClient from "./components/clientsignup"
 import Sitters from "./components/sitters";
@@ -22,6 +23,7 @@ export default function App() {
                     <Route path='/' element={<Home/>}/>
                     <Route path='/login' element={<Login/>}/>
                     <Route path='/profile' element={<Profile/>}/>
+                    <Route path='/offers' element={<Offers/>}/>
                     <Route path='/signup-as-sitter' element={<SignupSitter/>}/>
                     <Route path='/signup-as-client' element={< SignupClient/>}/>
                     <Route path='/help' element={<Accordion/>}></Route>

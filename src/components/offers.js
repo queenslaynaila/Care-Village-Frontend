@@ -1,7 +1,7 @@
 import {React, useEffect, useState} from "react";
 import ProfilePic from "../assets/pic.svg";
 
-function Profile() {
+function Offers() {
     const [user, setUser] = useState('');
     const [account, setAccount] = useState('');
 
@@ -34,4 +34,4 @@ function Profile() {
     )
 }
 
-export default Profile;
+export default Offers;
