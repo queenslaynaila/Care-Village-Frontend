@@ -46,23 +46,25 @@ export default function Jobofferform() {
             body: JSON.stringify(data)
         }).then(res => {
             console.log(res.json())
-            if (res.ok) setSuccess("Filled Successfully")
             if (!res.ok) setError(" failed. Try again")
-            setTitle('');
-            setAbout("");
-            setlocation("");                     
-            setPhoneNumber("");            
-            setKeyskills("");
-            setEducation("");
-            setEmail("");
-            setAvailability("");
-            setGender("");
-            setRateCharged("");
-            setAdditionalQualifications("");
-            setcomfortabilityWorkingOutsidelocation("");            
-            setworkExperience("");
-            setLanguages("");
-            navigate("./sitterdash")
+            if (res.ok) {
+                setSuccess("Filled Successfully")
+                setTitle('');
+                setAbout("");
+                setlocation("");                     
+                setPhoneNumber("");            
+                setKeyskills("");
+                setEducation("");
+                setEmail("");
+                setAvailability("");
+                setGender("");
+                setRateCharged("");
+                setAdditionalQualifications("");
+                setcomfortabilityWorkingOutsidelocation("");            
+                setworkExperience("");
+                setLanguages("");
+                navigate("/sitterdash");
+            }
         })
     }
 

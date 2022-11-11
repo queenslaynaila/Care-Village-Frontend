@@ -1,35 +1,19 @@
 import React,{useState} from 'react'
-import {Grid,Paper, MenuItem,Avatar, Typography, TextField, Checkbox ,Button, FormControl,FormControlLabel,FormLabel,Radio,RadioGroup, Snackbar, Alert, CircularProgress} from '@mui/material';
+import {Grid,Paper, MenuItem,Avatar, Typography, TextField, Checkbox ,Button, FormControl,FormControlLabel,FormLabel,Radio,RadioGroup, Snackbar, Alert, CircularProgress, InputLabel, Select} from '@mui/material';
 import { useNavigate } from 'react-router-dom'
 //import { LocalizationProvider } from '@mui/x-date-pickers-pro';
 //import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 //import { DateRangePicker, DateRange } from '@mui/x-date-pickers-pro/DateRangePicker';
-//import { Dayjs } from 'dayjs';
+//import { Dayjs } from 'dayjs'; 
+
   const defaultValues = {
     headline: "",
     DatePosted: `${new Date().getDate()}-${new Date().getMonth()}-${new Date().getYear()}`,
     CareNeeded: "",
-    loation: "",
+    location: "",
     schedule: "",
     peopleCount:" "
       };
-  const CareNeeded=[{
-    label :"BabySitter",
-    value:"BS"
-  },
-  {
-    label:"Nanny",
-    value:"NN"
-  },
-  {
-    label:"special needs care",
-    value:"SNC"
-  },
-   {
-    label:"companion care",
-    value:"CC"
-  }
-  ]; 
 
   
   const Url="http://localhost:8000/jobs"
@@ -45,7 +29,6 @@ import { useNavigate } from 'react-router-dom'
     const [formValues, setFormValues] = useState(defaultValues);
     const handleInputChange = (e) => {
       const { name, value } = e.target;
-      console.log('changing');
       setFormValues({
         ...formValues,
         [name]: value,
@@ -58,7 +41,7 @@ import { useNavigate } from 'react-router-dom'
         setIsLoading(true);
         event.preventDefault();
         console.log(formValues);
-        const response = await fetch(`${Url}?headline=${defaultValues.headline}&DatePosted=${defaultValues.DatePosted}&care_needed=${defaultValues.CareNeeded}&schedule=${defaultValues.schedule}&location=${defaultValues.location}`, { method: 'POST', 
+        const response = await fetch(`${Url}?headline=${defaultValues.headline}&date_posted=${defaultValues.DatePosted}&expires=expires&care_needed=${defaultValues.CareNeeded}&schedule=${defaultValues.schedule}&location=${defaultValues.location}&majorrequirement=peoplerequiredare${defaultValues.peopleCount}&sitter_id=1&client_id=1&status=Pending`, { method: 'POST', 
         headers: { 'Content-Type': 'application/json' }, });
          console.log(response.status);
          console.log(response);
@@ -74,11 +57,6 @@ import { useNavigate } from 'react-router-dom'
         setIsLoading(false);
    
     };
-    const [CareNeed, setCareNeed] = useState("BS");
-
-    const handleChange= (event) => {
-      setCareNeed(event.target.value);
-    }
    
     const navigate = useNavigate();
     return (
@@ -94,8 +72,8 @@ import { useNavigate } from 'react-router-dom'
                     <Typography variant='caption' gutterBottom>Please fill this form </Typography>
                 </Grid>}
                 {!isLoading && !isSuccess && <form onSubmit={handleSubmit}>
-                    <TextField onChange={handleInputChange} sx={{ mt: 2, mb: 2 }} fullWidth label='Headline' name='headline' placeholder="Headline" value={formValues.Headline} />
-                    <TextField onChange={handleInputChange} sx={{ mt: 2, mb: 2 }} fullWidth label='location' name='location' placeholder="Location" value={formValues.Loation}/>
+                    <TextField onChange={handleInputChange} sx={{ mt: 2, mb: 2 }} fullWidth label='Headline' name='headline' placeholder="Headline" value={formValues.headline} />
+                    <TextField onChange={handleInputChange} sx={{ mt: 2, mb: 2 }} fullWidth label='location' name='location' placeholder="Location" value={formValues.location}/>
                     <FormControl component="fieldset" style={marginTop}>
                         <FormLabel component="legend">Gender of Sitter Prefered</FormLabel>
                         <RadioGroup aria-label="gender Prefered" name="gender" style={{ display: 'initial' }}>
@@ -105,29 +83,31 @@ import { useNavigate } from 'react-router-dom'
                     </FormControl>
                     <FormControl component="fieldset" style={marginTop}>
                         <FormLabel component="legend">Schedule</FormLabel>
-                        <RadioGroup aria-label="gender Prefered" name="schedule" style={{ display: 'initial' }}>
+                        <RadioGroup onChange={handleInputChange} aria-label="gender Prefered" name="schedule" style={{ display: 'initial' }}>
                             <FormControlLabel value="daily" control={<Radio />} label="Daily" />
                             <FormControlLabel value="weekly" control={<Radio />} label="Weekly" />
                             <FormControlLabel value="monthly" control={<Radio />} label="Monthly" />
                         </RadioGroup>
                     </FormControl>
                     <TextField fullWidth label='date-posted' placeholder="" value={formValues.DatePosted}/>
-                    <TextField sx={{ mt: 2, mb: 2 }} fullWidth label='No of persons' placeholder="Enter number of persons to be attended " name="peopleCount"value={formValues.peopleCount}/>
-                    <TextField
-                      sx={{ mt: 2, mb: 2 }} 
-                      id="outlined-select-currency"
-                      select
-                      label="Care-needed"
-                       value={CareNeed}
-                        onChange={handleChange}
-                        helperText="Please select the care you need"
-                         >
-                        {CareNeeded.map((option) => (
-                         <MenuItem key={option.value} value={option.value}>
-                        {option.label}
-                        </MenuItem>
-                       ))}
-                       </TextField>
+                    <TextField sx={{ mt: 2, mb: 2 }} fullWidth label='No of persons' placeholder="Enter number of persons to be attended " name="peopleCount" onChange={handleInputChange} value={formValues.peopleCount}/>
+
+                       <FormControl fullWidth>
+                        <InputLabel id="demo-simple-select-label">Care Needed</InputLabel>
+                        <Select
+                          labelId="demo-simple-select-label"
+                          id="demo-simple-select"
+                          value={defaultValues.CareNeeded}
+                          label="Care Needed"
+                          onChange={handleInputChange}
+                          name='CareNeeded'
+                        >
+                          <MenuItem sx={{ color: 'black' }} value='BabySitter'>BabySitter</MenuItem>
+                          <MenuItem value='Nanny'>Nanny</MenuItem>
+                          <MenuItem value='Special Needs Care'>Special Needs Care</MenuItem>
+                          <MenuItem value='Companion Care'>Companion Care</MenuItem>
+                        </Select>
+                      </FormControl>
 
                     <FormControlLabel
                         control={<Checkbox name="checkedA" />}
