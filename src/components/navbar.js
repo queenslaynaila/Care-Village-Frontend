@@ -15,6 +15,7 @@ function Navbar() {
 
     function logout() {
         localStorage.removeItem('user');
+        localStorage.removeItem('account');
         if (user) setUser('')
         navigate('/login', {
             state: {
@@ -46,14 +47,14 @@ function Navbar() {
                                     {user.usertype === 'client' ?
                                         <li className="nav-item">
                                             <a className="nav-link" href="#/"
-                                               onClick={() => navigate("/offers")}>
+                                               onClick={() => navigate("/browsesitter")}>
                                                 <i className="bi bi-search"/> Search sitters
                                             </a>
                                         </li>
                                         :
                                         <li className="nav-item">
                                             <a className="nav-link" href="#/"
-                                               onClick={() => navigate("/offers")}>
+                                               onClick={() => navigate("/jobofferform")}>
                                                 <i  className="bi bi-file-earmark-plus-fill"/> Create job offer
                                             </a>
                                         </li>
