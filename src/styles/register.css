@@ -1,0 +1,110 @@
+
+.main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.errmsg {
+  background-color: lightpink;
+  color: firebrick;
+  font-weight: bold;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.logincontainer{
+  background: #fff;
+  max-width: 420px;
+  width: 100%;
+  padding: 25px 30px;
+  border-radius: 5px;
+  box-shadow: 2px 10px 35px 1px rgba(153, 153, 153, 0.3);
+  font-family: 'Poppins',sans-serif;
+}
+.logincontainer form .title{
+  font-size: 20px;
+  font-weight: 600;
+  margin: 20px 0 10px 0;
+  position: relative;
+  color: #dc3545
+}
+.logincontainer form .title:before{
+  content: '';
+  position: absolute;
+  height: 4px;
+  width: 33px;
+  left: 0px;
+  bottom: 3px;
+  border-radius: 5px;
+
+}
+.logincontainer form .input-box{
+  width: 100%;
+  height: 45px;
+  margin-top: 25px;
+  position: relative;
+}
+.logincontainer form .input-box input{
+  width: 100%;
+  height: 100%;
+  outline: none;
+  font-size: 16px;
+  border: none;
+}
+
+
+.logincontainer form .button{
+  margin: 40px 0 20px 0;
+}
+.logincontainer .input-box input[type="submit"]{
+  background: #990056;
+  font-size: 17px;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.logincontainer .input-box input[type="submit"]:hover{
+  letter-spacing: 1px;
+  background: linear-gradient(to left, #99004d 0%, #ff0080 100%);
+}
+.container .option{
+  font-size: 14px;
+  text-align: center;
+}
+.container .facebook a,
+.container .twitter a{
+  display: block;
+  height: 45px;
+  width: 100%;
+  font-size: 15px;
+  text-decoration: none;
+  padding-left: 20px;
+  line-height: 45px;
+  color: #fff;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.container .facebook i,
+.container .twitter i{
+  padding-right: 12px;
+  font-size: 20px;
+}
+.container .twitter a{
+  background: #990056;
+  margin: 20px 0 15px 0;
+}
+.container .twitter a:hover{
+  background:  linear-gradient(to left, #99004d 0%, #ff0080 100%);
+  margin: 20px 0 15px 0;
+}
+.container .facebook a{
+  background: #990056 ;
+  margin: 20px 0 50px 0;
+}
+.container .facebook a:hover{
+  background: linear-gradient(to left, #99004d 0%, #ff0080 100%);;
+  margin: 20px 0 50px 0;
+}

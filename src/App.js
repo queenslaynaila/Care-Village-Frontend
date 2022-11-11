@@ -1,13 +1,42 @@
-import React from 'react'
 
-
-export default function Approuter() {
-  return (
-    <div>
-      <h1>Hey,we will store all our routes and the components they define in router/AppRouter.js code all your individual components on the components folder.On the styles folder make a stylesheet for your components, and code all your css there,use classNames and idnames that are highly unique yet explainable on their own.Any image you want to use place it in the assets folder and youl import it in your individual component.On the Approuter.js file youl import your component define the route for your section and your individual components for instance Route exact path="/" element=Home.  </h1>
-      <h2 style={{color:"red"}}>Remember to create your own branches in your devices,checkin to that branch and start work on that branch, also when pushing remember not to push to main.Each individual should push work to their individual branch that theyve created.Branchnames should match your asigned feature eg ft-home for the homepage</h2>
-    
-    </div>
-  )
+import Accordion from "./components/accordion"
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
+import Navbar from "./components/navbar";
+import Home from "./components/home";
+import Login from "./components/login"
+import NotFound from "./components/404";
+import Profile from "./components/profile";
+import Offers from "./components/offers";
+import SignupSitter from "./components/signupsitter"
+import SignupClient from "./components/clientsignup"
+import Sitters from "./components/sitters";
+import DashboardForClient from "./components/clientui";
+import JobDetailsForm from "./components/jobdetailsform";
+import Jobofferform from "./components/jobofferform";
+import SittersCard from "./components/sitterscard";
+import BrowseSitter from "./components/browsesitter";
+export default function App() {
+    return (
+        <Router>
+            <Routes>
+                <Route path='/' element={<Navbar/>}>
+                    <Route path='/' element={<Home/>}/>
+                    <Route path='/login' element={<Login/>}/>
+                    <Route path='/profile' element={<Profile/>}/>
+                    <Route path='/offers' element={<Offers/>}/>
+                    <Route path='/signup-as-sitter' element={<SignupSitter/>}/>
+                    <Route path='/signup-as-client' element={< SignupClient/>}/>
+                    <Route path='/help' element={<Accordion/>}></Route>
+                    <Route path='/sitters-dashboard' element={<Sitters/>}></Route>
+                    <Route path='/clients-dashboard' element={<DashboardForClient/>}></Route>
+                    <Route path='/jobdetailsform' element={<JobDetailsForm/>}/>
+                    <Route path='/Jobofferform' element={<Jobofferform/>}/>
+                    <Route path='*' element={<NotFound/>}/>
+                    <Route path='/sitterscard' element={<SittersCard/>}></Route>
+                    <Route path='/browsesitter' element={<BrowseSitter/>}></Route>
+                </Route>
+            </Routes>
+        </Router>
+    )
 }
 
