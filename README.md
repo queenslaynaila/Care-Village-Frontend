@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+#  PROJECT NAME
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+CARE VILLAGE
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+1. [Description](#description)
+2. [Technologies used](#technology-used)
+3. [Setup](#setup)
+4. [How to use the website](#how-to-use-the-website)
+5. [Licence](#licence)
+6. [AuthorS info](#authorS-info)
 
-### `npm start`
+# DESCRIPTION
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+ The main goal of this project is to connect people seeking care services like a baby sitter, a nanny , a pet carer , a special needs care services to those who are offering such services
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## TECHNOLOGY USED
+    Project is created with:
+            -Ruby and Sinatra for backend
+            -React for the frontend
+            -Material-ui,Custom css and Boostrap ui for the styling
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## HOW TO USE THE WEBSITE
 
-### `npm run build`
+On page load the user will see the homepage with the homepage
+<img src="./src/assets/homepage.png">
+On the homepage if a user want to find services he or she can sign up as a client , if he or she wants to offer such services he or she can sign up as a client
+If he signs up as a client he or she will see the following
+<img src="./src/assets/client.png">
+On cliecking serach sitters he or sh will see a alist of sitters in the app.
+## LICENCE
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+[MIT](LICENCE)
+Copyright (c) 2022 Jema Queenslay Naila
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## AUTHORS INFO
+This project was made by the following
+            -Queenslay jEMA
+            -Soila Torome
+            -Brian Wangombe
+            -Stephen Onchieku
+            -Anne WAirumu
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+For any query contact either of them at queenslayjema@gmail.com,ann.mwangi@student.moringaschool.com,brian.wangombe@student.moringaschool.com,sammy.wekesa@student.moringaschool.com,stephen.onchieku@student.moringaschool.com,soila.torome@student.moringaschool.com.
