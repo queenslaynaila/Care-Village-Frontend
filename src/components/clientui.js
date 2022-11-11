@@ -1,10 +1,10 @@
 import React from "react";
 import sitterlogo from "../assets/sitter.png";
 import "../styles/citter.css";
-
+import {useNavigate} from "react-router-dom";
 
 function DashboardForClient(){
-
+  const navigate = useNavigate()
 
     return (
         <React.Fragment>
@@ -28,7 +28,7 @@ function DashboardForClient(){
                             </div>
                             <div id="dashbtnright">
                                 <button  className="dashbtns">View JObs</button>
-                                <button  className="dashbtns">POST JObs</button>
+                                <button  onClick={() => { navigate('/jobdetailsform') }} className="dashbtns">POST JObs</button>
                             </div>
                            </div>
                      </div>

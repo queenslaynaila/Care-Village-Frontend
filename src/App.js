@@ -29,7 +29,6 @@ export default function App() {
                     <Route path='/clients-dashboard' element={<DashboardForClient/>}></Route>
                     <Route path='/jobdetailsform' element={<JobDetailsForm/>}/>
                     <Route path='/Jobofferform' element={<Jobofferform/>}/>
-
                     <Route path='*' element={<NotFound/>}/>
                     <Route path='/sitterscard' element={<SittersCard/>}></Route>
                     <Route path='/browsesitter' element={<BrowseSitter/>}></Route>
