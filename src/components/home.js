@@ -14,7 +14,9 @@ function Home() {
         const user = JSON.parse(localStorage.getItem('user'));
         if (user) setUser(user)
     }, []);
-
+    function handleClick(e) {
+        navigate("/browsesitter");
+    }
     return (
         <div className="py-5">
             <div className="row mb-5">
@@ -64,16 +66,17 @@ function Home() {
             </div>
             <h1 className="my-5">Categories</h1>
             <div className="row mt-5 ms-sm-0 ms-5">
-                <div className="col-sm-auto mb-2">
+                <div style={{cursor:"pointer"}} onClick={(e)=>handleClick(e)} className="col-sm-auto mb-2">
                     <div className="card shadow p-2" style={{width: "15rem", alignItems: "center"}}>
                         <img src={baby} height="100px" width="100px" alt="Grandma"/>
                         <div className="card-body">
                             <h5 className="card-title">Baby Sitter</h5>
                             <p className="card-text">Regular support for after-school, weekdays, and weekends</p>
                         </div>
+
                     </div>
                 </div>
-                <div className="col-auto mb-2">
+                <div style={{cursor:"pointer"}} onClick={(e)=>handleClick(e)} className="col-auto mb-2">
                     <div className="card shadow p-2" style={{width: "15rem", alignItems: "center"}}>
                         <img src={pet} height="100px" width="100px" alt="Grandma"/>
                         <div className="card-body">
@@ -81,24 +84,27 @@ function Home() {
                             <p className="card-text">Occasional help with last-minute needs, date night and
                                 more</p>
                         </div>
+
                     </div>
                 </div>
-                <div className="col-auto mb-2">
+                <div style={{cursor:"pointer"}} onClick={(e)=>handleClick(e)} className="col-auto mb-2">
                     <div className="card shadow p-2" style={{width: "15rem", alignItems: "center"}}>
                         <img src={medical} height="100px" width="100px" alt="Grandma"/>
                         <div className="card-body">
                             <h5 className="card-title">Care Companion</h5>
                             <p className="card-text">Specialized care to meet the individual needs of your patient</p>
                         </div>
+
                     </div>
                 </div>
-                <div className="col-auto mb-2">
+                <div style={{cursor:"pointer"}} onClick={(e)=>handleClick(e)} className="col-auto mb-2">
                     <div className="card shadow p-2" style={{width: "15rem", alignItems: "center"}}>
                         <img src={specialNeeds} height="100px" width="100px" alt="Grandma"/>
                         <div className="card-body">
                             <h5 className="card-title">Special Needs</h5>
                             <p className="card-text">Specialized care to meet the individual needs of your child</p>
                         </div>
+
                     </div>
                 </div>
             </div>

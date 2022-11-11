@@ -9,6 +9,8 @@ import SignupSitter from "./components/signupsitter"
 import SignupClient from "./components/clientsignup"
 import Sitters from "./components/sitters";
 import DashboardForClient from "./components/clientui";
+import SittersCard from "./components/sitterscard";
+import BrowseSitter from "./components/browsesitter";
 export default function App() {
     return (
         <Router>
@@ -22,6 +24,8 @@ export default function App() {
                     <Route path='/sitters-dashboard' element={<Sitters/>}></Route>
                     <Route path='/clients-dashboard' element={<DashboardForClient/>}></Route>
                     <Route path='*' element={<NotFound/>}/>
+                    <Route path='/sitterscard' element={<SittersCard/>}></Route>
+                    <Route path='/browsesitter' element={<BrowseSitter/>}></Route>
                 </Route>
             </Routes>
         </Router>

@@ -1,0 +1,31 @@
+.sitter-card {
+    background-color: white;
+    width: 350px;
+    height: 350px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+    position: relative;
+
+}
+
+#sitter-username {
+    text-align: center;
+}
+
+#sitter-button {
+    margin-top: 50px;
+
+}
+.sitter-desription {
+    margin-top: 100px;
+}
+
+/* .button-div {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 100;
+} */
