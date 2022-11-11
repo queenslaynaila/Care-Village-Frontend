@@ -44,7 +44,7 @@ export default function SignupSitter() {
                     setSuccess("Signup Success")
                     navigate('/login', {
                         state: {
-                            message: "Signup was Successful, you can now login."
+                            message: "Signup was Successful. You can now login!"
                         }
                     })
                 } else {
