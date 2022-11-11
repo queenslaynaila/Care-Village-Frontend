@@ -6,7 +6,7 @@ function Footer() {
 
     return (
         <div className="container" style={{paddingTop:"end"}}>
-            <footer className="py-5">
+            <footer className="pt-3 pb-5">
                 <hr/>
                 <div className="row">
                     <div className="col-sm-6 mb-3">
