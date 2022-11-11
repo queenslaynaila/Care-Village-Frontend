@@ -36,11 +36,16 @@ On cliecking serach sitters he or sh will see a alist of sitters in the app.
 Copyright (c) 2022 Jema Queenslay Naila
 
 ## AUTHORS INFO
-This project was made by the following
+ Project is created with:
             -Queenslay jEMA
             -Soila Torome
             -Brian Wangombe
             -Stephen Onchieku
             -Anne WAirumu
 
+## CONTACT INFO
 For any query contact either of them at queenslayjema@gmail.com,ann.mwangi@student.moringaschool.com,brian.wangombe@student.moringaschool.com,sammy.wekesa@student.moringaschool.com,stephen.onchieku@student.moringaschool.com,soila.torome@student.moringaschool.com.
+
+## BACKEND LINK
+The backend for the project is at https://github.com/queenslaynaila/Care-Village-Backend
+
