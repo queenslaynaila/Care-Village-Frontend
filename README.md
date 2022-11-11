@@ -12,7 +12,7 @@ The backend for the project is at https://github.com/queenslaynaila/Care-Village
 4. [How to use the website](#how-to-use-the-website)
 5. [Licence](#licence)
 6. [AuthorS info](#authorS-info)
- 
+
 
 # DESCRIPTION
 
@@ -39,8 +39,8 @@ On cliecking serach sitters he or sh will see a alist of sitters in the app.
 Copyright (c) 2022 Jema Queenslay Naila
 
 ## AUTHORS INFO
- Project is created with:
-            -Queenslay jEMA
+ Project is created by:
+            -Queenslay Jema
             -Soila Torome
             -Brian Wangombe
             -Stephen Onchieku
