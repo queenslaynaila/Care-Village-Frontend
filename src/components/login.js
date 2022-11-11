@@ -26,7 +26,7 @@ export default function Login() {
             username: username,
             password: password,
         }
-        console.log(data)
+        
         fetch(url, {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},

@@ -50,7 +50,7 @@ function Navbar() {
                                         <li className="nav-item">
                                             <a className="nav-link" href="#/"
                                                onClick={() => navigate("/offers")}>
-                                                <i className="bi bi-file-earmark-plus-fill"/> Create job offer
+                                                <i  className="bi bi-file-earmark-plus-fill"/> Create job offer
                                             </a>
                                         </li>
                                     }
